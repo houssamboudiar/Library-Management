@@ -1,0 +1,16 @@
+C:\Users\houss\source\repos\Library Management\Library-Management\IRemoteWCF\bin\Debug\IRemoteWCF.dll
+C:\Users\houss\source\repos\Library Management\Library-Management\IRemoteWCF\bin\Debug\IRemoteWCF.pdb
+C:\Users\houss\source\repos\Library Management\Library-Management\IRemoteWCF\obj\Debug\IRemoteWCF.csprojAssemblyReference.cache
+C:\Users\houss\source\repos\Library Management\Library-Management\IRemoteWCF\obj\Debug\IRemoteWCF.csproj.CoreCompileInputs.cache
+C:\Users\houss\source\repos\Library Management\Library-Management\IRemoteWCF\obj\Debug\IRemoteWCF.dll
+C:\Users\houss\source\repos\Library Management\Library-Management\IRemoteWCF\obj\Debug\IRemoteWCF.pdb
+C:\Users\houss\source\repos\Library Management\Library-Management\IRemoteWCF\bin\Debug\MySql.Data.dll
+C:\Users\houss\source\repos\Library Management\Library-Management\IRemoteWCF\obj\Debug\IRemoteWCF.csproj.CopyComplete
+C:\Users\houss\source\repos\Library-Management\Library-Management\IRemoteWCF\bin\Debug\IRemoteWCF.dll
+C:\Users\houss\source\repos\Library-Management\Library-Management\IRemoteWCF\bin\Debug\IRemoteWCF.pdb
+C:\Users\houss\source\repos\Library-Management\Library-Management\IRemoteWCF\bin\Debug\MySql.Data.dll
+C:\Users\houss\source\repos\Library-Management\Library-Management\IRemoteWCF\obj\Debug\IRemoteWCF.csprojAssemblyReference.cache
+C:\Users\houss\source\repos\Library-Management\Library-Management\IRemoteWCF\obj\Debug\IRemoteWCF.csproj.CoreCompileInputs.cache
+C:\Users\houss\source\repos\Library-Management\Library-Management\IRemoteWCF\obj\Debug\IRemoteWCF.csproj.CopyComplete
+C:\Users\houss\source\repos\Library-Management\Library-Management\IRemoteWCF\obj\Debug\IRemoteWCF.dll
+C:\Users\houss\source\repos\Library-Management\Library-Management\IRemoteWCF\obj\Debug\IRemoteWCF.pdb

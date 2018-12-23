@@ -11,14 +11,14 @@ namespace IRemote.Models
         private String title, theme, type;
         private int idWork;
 
-        public Work(List<string> tags, List<string> writers, string title, string theme, string type)
+        public Work(List<string> tags, List<string> writers, string title, string theme, string type,int idWork)
         {
             this.Tags = tags;
             this.Writers = writers;
             this.Title = title;
             this.Theme = theme;
             this.Type = type;
-            this.IdWork = IdWork;
+            IdWork = idWork;
         }
 
         public List<string> Tags { get => tags; set => tags = value; }

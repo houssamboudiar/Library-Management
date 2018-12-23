@@ -13,6 +13,7 @@ namespace LibraryServer.Control
     public class ConsultWorks : MarshalByRefObject, IConsultWorks
     {
         ConsultWorksDataService consultWorksDataService = new ConsultWorksDataService();
+
         public List<Work> getAllWorks()
         {
             DataTable workTable = consultWorksDataService.getAllWorks();
@@ -24,6 +25,7 @@ namespace LibraryServer.Control
                 List<string> tags = null, writers = null;
                 String title, theme, type;
                 int idWork;
+
                 idWork = Convert.ToInt32(dr["code"]);
                 title = dr["titre"].ToString();
                 theme = dr["theme"].ToString();
@@ -36,17 +38,19 @@ namespace LibraryServer.Control
                 tags = Strtags.Split(separatingChars, System.StringSplitOptions.RemoveEmptyEntries).ToList();
                 writers = Strwriters.Split(separatingChars, System.StringSplitOptions.RemoveEmptyEntries).ToList();
 
-                workList.Add(new Work(tags,writers, title,theme,type));
+                workList.Add(new Work(tags,writers, title,theme,type,idWork));
             }
             return workList;
         }
 
-        public Work getById(string idWork)
+        public Work getById(int idWork)
         {
             List<Work> listWorks = getAllWorks();
             foreach (Work work in listWorks)
             {
-                if (work.IdWork.Equals(idWork))
+                Console.WriteLine("Work ID : " + work.IdWork );
+                Console.WriteLine("Searched Work ID : " + idWork );
+                if (work.IdWork == idWork)
                 {
                     return work;
                 }

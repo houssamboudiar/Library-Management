@@ -1,0 +1,22 @@
+C:\Users\houss\source\repos\Library Management\Library-Management\LibraryServerWCF\bin\Debug\LibraryServerWCF.exe.config
+C:\Users\houss\source\repos\Library Management\Library-Management\LibraryServerWCF\bin\Debug\LibraryServerWCF.exe
+C:\Users\houss\source\repos\Library Management\Library-Management\LibraryServerWCF\bin\Debug\LibraryServerWCF.pdb
+C:\Users\houss\source\repos\Library Management\Library-Management\LibraryServerWCF\bin\Debug\IRemoteWCF.dll
+C:\Users\houss\source\repos\Library Management\Library-Management\LibraryServerWCF\bin\Debug\MySql.Data.dll
+C:\Users\houss\source\repos\Library Management\Library-Management\LibraryServerWCF\bin\Debug\IRemoteWCF.pdb
+C:\Users\houss\source\repos\Library Management\Library-Management\LibraryServerWCF\obj\Debug\LibraryServerWCF.csprojAssemblyReference.cache
+C:\Users\houss\source\repos\Library Management\Library-Management\LibraryServerWCF\obj\Debug\LibraryServerWCF.csproj.CoreCompileInputs.cache
+C:\Users\houss\source\repos\Library Management\Library-Management\LibraryServerWCF\obj\Debug\LibraryServerWCF.csproj.CopyComplete
+C:\Users\houss\source\repos\Library Management\Library-Management\LibraryServerWCF\obj\Debug\LibraryServerWCF.exe
+C:\Users\houss\source\repos\Library Management\Library-Management\LibraryServerWCF\obj\Debug\LibraryServerWCF.pdb
+C:\Users\houss\source\repos\Library-Management\Library-Management\LibraryServerWCF\bin\Debug\LibraryServerWCF.exe.config
+C:\Users\houss\source\repos\Library-Management\Library-Management\LibraryServerWCF\bin\Debug\LibraryServerWCF.exe
+C:\Users\houss\source\repos\Library-Management\Library-Management\LibraryServerWCF\bin\Debug\LibraryServerWCF.pdb
+C:\Users\houss\source\repos\Library-Management\Library-Management\LibraryServerWCF\bin\Debug\IRemoteWCF.dll
+C:\Users\houss\source\repos\Library-Management\Library-Management\LibraryServerWCF\bin\Debug\MySql.Data.dll
+C:\Users\houss\source\repos\Library-Management\Library-Management\LibraryServerWCF\bin\Debug\IRemoteWCF.pdb
+C:\Users\houss\source\repos\Library-Management\Library-Management\LibraryServerWCF\obj\Debug\LibraryServerWCF.csprojAssemblyReference.cache
+C:\Users\houss\source\repos\Library-Management\Library-Management\LibraryServerWCF\obj\Debug\LibraryServerWCF.csproj.CoreCompileInputs.cache
+C:\Users\houss\source\repos\Library-Management\Library-Management\LibraryServerWCF\obj\Debug\LibraryServerWCF.csproj.CopyComplete
+C:\Users\houss\source\repos\Library-Management\Library-Management\LibraryServerWCF\obj\Debug\LibraryServerWCF.exe
+C:\Users\houss\source\repos\Library-Management\Library-Management\LibraryServerWCF\obj\Debug\LibraryServerWCF.pdb

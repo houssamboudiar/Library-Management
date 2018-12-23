@@ -10,3 +10,9 @@ C:\Users\houss\source\repos\Library Management\Library-Management\ClassLibrary1\
 C:\Users\houss\source\repos\Library Management\Library-Management\ClassLibrary1\obj\Debug\IRemote.csproj.CoreCompileInputs.cache
 C:\Users\houss\source\repos\Library Management\Library-Management\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\houss\source\repos\Library Management\Library-Management\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClassLibrary1\obj\Debug\IRemote.csprojAssemblyReference.cache
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClassLibrary1\obj\Debug\IRemote.csproj.CoreCompileInputs.cache
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

@@ -16,9 +16,15 @@ namespace LibraryServer.Control
 
         public bool AddWork(List<string> tags, List<string> writers, string title, string theme, string type)
         {
-            Work work = new Work(tags, writers, title, theme, type);
+            if( type != "Thèses" || type != "Livre" || type != "Mémoires")
+            {
+                Console.WriteLine("Sorry cannot insert such type "+ type);
+                return false;
+            }
+            Work work = new Work(tags, writers, title, theme, type,0);
             return manageWorksDataService.addWorkDataService(work);
         }
+
         public bool ConfirmWork(int idWork, int idBorrower)
         {
             return manageWorksDataService.confirmReservationDataService(idWork, idBorrower);
@@ -31,7 +37,14 @@ namespace LibraryServer.Control
 
         public bool EditWork(int idWork, List<string> tags, List<string> writers, string title, string theme, string type)
         {
-            Work work = new Work(tags, writers, title, theme, type);
+            if (type != "Thèses" || type != "Livre" || type != "Mémoires")
+            {
+                Console.WriteLine("Sorry cannot insert such type " + type);
+                return false;
+            }
+
+            Work work = new Work(tags, writers, title, theme, type,0);
+
             return manageWorksDataService.EditWork(idWork, work);
         }
     }

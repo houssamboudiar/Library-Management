@@ -26,3 +26,17 @@ C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibraria
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.pdb
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.deleteWorkForm.resources
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.addWorkForm.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\bin\Debug\ClientLibrarian.exe.config
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\bin\Debug\ClientLibrarian.exe
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\bin\Debug\ClientLibrarian.pdb
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\bin\Debug\ClassLibrary1.dll
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\bin\Debug\ClassLibrary1.pdb
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.csprojAssemblyReference.cache
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.deleteWorkForm.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.addWorkForm.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.Properties.Resources.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.csproj.GenerateResource.cache
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.csproj.CoreCompileInputs.cache
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.csproj.CopyComplete
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.exe
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.pdb
