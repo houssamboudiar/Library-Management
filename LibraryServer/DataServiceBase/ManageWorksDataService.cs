@@ -10,7 +10,7 @@ namespace LibraryServer.DataServiceBase
 {
     public class ManageWorksDataService : MarshalByRefObject
     {
-        crudMysql crudmysql = new crudMysql("localhost", "poc", "houssamboudiar", "stormspirit99");
+        crudMysql crudmysql = new crudMysql("localhost", "poc", "root", "");
         public void test()
         {
             crudmysql.TestConnection();
@@ -42,6 +42,7 @@ namespace LibraryServer.DataServiceBase
 
             var tagsString = String.Join(", ", work.Tags.ToArray());
             var writersString = String.Join(", ", work.Writers.ToArray());
+
             string query = String.Format("UPDATE `ouvrage` SET `titre` = '{0}', `auteurs` = '{1}', `theme` = '{2}', `type` = '{3}', `mots_cle` = '{4}' WHERE `ouvrage`.`code` = {5}"
             , work.Title, writersString, work.Theme, work.Type, tagsString,idWork);
 

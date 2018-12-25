@@ -16,19 +16,19 @@ namespace LibraryServer
     {
         public static void Main(string[] args)
         {
-            try
-            {
-                TcpChannel cnl = new TcpChannel(1234);
-                ChannelServices.RegisterChannel(cnl, false);
-                RemotingConfiguration.RegisterWellKnownServiceType(typeof(ManageWorks), "obj", WellKnownObjectMode.Singleton);
-                Console.WriteLine("serveur demarrer");
-                Console.ReadLine();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("erreur : " + e);
-                Console.ReadLine();
-            }
+              try
+              {
+                  TcpChannel cnl = new TcpChannel(1234);
+                  ChannelServices.RegisterChannel(cnl, false);
+                  RemotingConfiguration.RegisterWellKnownServiceType(typeof(ServerLibrary), "obj", WellKnownObjectMode.Singleton);
+                  Console.WriteLine("serveur demarrer");
+                  Console.ReadLine();
+              }
+              catch (Exception e)
+              {
+                  Console.WriteLine("erreur : " + e);
+                  Console.ReadLine();
+              }
             /*
             ManageWorksDataService m = new ManageWorksDataService();
             ConsultWorksDataService c = new ConsultWorksDataService();
@@ -42,7 +42,7 @@ namespace LibraryServer
             /*foreach (DataColumn col in table.Columns)
             {
                 Console.WriteLine("{0}", col);
-            }
+            }*/
             /*Boolean h = m.EditWork(7, tags, writers , "titlechanged" , "themechanged" , "book");
             //Console.WriteLine(h);
             code
@@ -64,8 +64,10 @@ namespace LibraryServer
                     Console.WriteLine(ch);
                 }
             }
+            Console.ReadLine();
+            ServerLibrary s = new ServerLibrary();
+            Console.WriteLine(s.getById(5).Title);
             Console.ReadLine();*/
-
         }
     }
 }

@@ -30,5 +30,6 @@ namespace IRemoteWCF.Models
         public string LastName { get => lastName; set => lastName = value; }
         [DataMember]
         public Account Account { get => account; set => account = value; }
+    
     }
 }

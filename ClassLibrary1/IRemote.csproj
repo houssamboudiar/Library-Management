@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IConsultWorks.cs" />
+    <Compile Include="IClient.cs" />
     <Compile Include="IFactory.cs" />
-    <Compile Include="IManageWorks.cs" />
+    <Compile Include="ILibrarian.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Borrower.cs" />
     <Compile Include="Models\Borrowing.cs" />

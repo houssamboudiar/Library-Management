@@ -6,7 +6,6 @@ namespace IRemote
 {
     public interface IFactory
     {
-        IConsultWorks consultWorks();
-        IManageWorks manageWorks();
+        
     }
 }

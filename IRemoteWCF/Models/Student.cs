@@ -8,30 +8,18 @@ namespace IRemoteWCF.Models
     [DataContract]
     public class Student
     {
-        private int cardID;
-        private String firstName, lastName, specialty, level;
-        private Account account;
+        private String specialty, level;
+        private Borrower borrower;
 
-        public Student(int cardID, string firstName, string lastName, string specialty, string level, Account account)
+        public Student(Borrower borrower, string specialty, string level)
         {
-            this.CardID = cardID;
-            this.FirstName = firstName;
-            this.LastName = lastName;
             this.Specialty = specialty;
             this.Level = level;
-            this.Account = account;
+            this.Borrower = borrower;
         }
-        [DataMember]
-        public int CardID { get => cardID; set => cardID = value; }
-        [DataMember]
-        public string FirstName { get => firstName; set => firstName = value; }
-        [DataMember]
-        public string LastName { get => lastName; set => lastName = value; }
-        [DataMember]
+
         public string Specialty { get => specialty; set => specialty = value; }
-        [DataMember]
         public string Level { get => level; set => level = value; }
-        [DataMember]
-        public Account Account { get => account; set => account = value; }
+        public Borrower Borrower { get => borrower; set => borrower = value; }
     }
 }

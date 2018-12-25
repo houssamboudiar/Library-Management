@@ -48,18 +48,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsultWorks.cs" />
+    <Compile Include="Connected Services\ConsultWorksService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ManageWorksService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteWork.Designer.cs">
+      <DependentUpon>DeleteWork.cs</DependentUpon>
+    </Compile>
     <Compile Include="deleteWorkForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="deleteWorkForm.Designer.cs">
       <DependentUpon>deleteWorkForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageWorks.cs" />
+    <Compile Include="EditWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditWork.Designer.cs">
+      <DependentUpon>EditWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetWork.Designer.cs">
+      <DependentUpon>GetWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewWork.Designer.cs">
+      <DependentUpon>NewWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfilLibrarian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfilLibrarian.Designer.cs">
+      <DependentUpon>ProfilLibrarian.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DeleteWork.resx">
+      <DependentUpon>DeleteWork.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="deleteWorkForm.resx">
       <DependentUpon>deleteWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWork.resx">
+      <DependentUpon>EditWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetWork.resx">
+      <DependentUpon>GetWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewWork.resx">
+      <DependentUpon>NewWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilLibrarian.resx">
+      <DependentUpon>ProfilLibrarian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,6 +123,31 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="app.config" />
+    <None Include="Connected Services\ConsultWorksService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ConsultWorksService\IRemoteWCF.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ConsultWorksService\service.wsdl" />
+    <None Include="Connected Services\ConsultWorksService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ConsultWorksService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ManageWorksService\ManageWorks.wsdl" />
+    <None Include="Connected Services\ManageWorksService\ManageWorks.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ManageWorksService\ManageWorks1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ManageWorksService\ManageWorks2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\IRemoteWCF.Models.Work.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,13 +159,44 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\IRemoteWCF\IRemoteWCF.csproj">
       <Project>{0ae7c4cf-b0f2-4e46-8595-529a88082dc0}</Project>
       <Name>IRemoteWCF</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ConsultWorksService\" />
+    <WCFMetadataStorage Include="Connected Services\ManageWorksService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ManageWorksService\ManageWorks.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ManageWorksService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ManageWorksService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ManageWorksService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ConsultWorksService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ConsultWorksService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ConsultWorksService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

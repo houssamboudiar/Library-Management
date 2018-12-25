@@ -133,17 +133,6 @@ namespace IRemoteWCF.Control.DataServiceBase
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
 
-                /*string query = "update product set name=@name,price=@price where idproduct=@id";
-                cmd.Parameters.Add("@name", MySqlDbType.VarChar, 45);
-                cmd.Parameters.Add("@price", MySqlDbType.Float);
-                cmd.Parameters.Add("@id", MySqlDbType.Int32);
-                
-                Console.Write("Updating data....");
-                cmd.Parameters[0].Value = "product-update";
-                cmd.Parameters[1].Value = 0.75;
-                cmd.Parameters[2].Value = id;
-                */
-
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
@@ -177,12 +166,8 @@ namespace IRemoteWCF.Control.DataServiceBase
                 Console.WriteLine("Connected");
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
-                /*
-                string query = "delete from product where idproduct=@id";
-                cmd.Parameters.Add("@id", MySqlDbType.Int32);
-                */
+
                 Console.Write("Deleting data....");
-                //cmd.Parameters[0].Value = id;
 
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -206,7 +191,5 @@ namespace IRemoteWCF.Control.DataServiceBase
                 return false;
             }
         }
-
-
     }
 }

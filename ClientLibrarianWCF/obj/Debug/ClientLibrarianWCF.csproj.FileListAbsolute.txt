@@ -26,3 +26,8 @@ C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibraria
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarianWCF\obj\Debug\ClientLibrarianWCF.csproj.CopyComplete
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarianWCF\obj\Debug\ClientLibrarianWCF.exe
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarianWCF\obj\Debug\ClientLibrarianWCF.pdb
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarianWCF\obj\Debug\ClientLibrarian.DeleteWork.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarianWCF\obj\Debug\ClientLibrarian.EditWork.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarianWCF\obj\Debug\ClientLibrarian.GetWork.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarianWCF\obj\Debug\ClientLibrarian.NewWork.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarianWCF\obj\Debug\ClientLibrarian.ProfilLibrarian.resources

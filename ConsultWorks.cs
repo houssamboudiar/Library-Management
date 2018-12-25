@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IRemoteWCF.Models
+namespace IRemoteWCF
 {
     using System.Runtime.Serialization;
     

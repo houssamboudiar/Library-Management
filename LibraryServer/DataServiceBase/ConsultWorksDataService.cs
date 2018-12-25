@@ -10,7 +10,7 @@ namespace LibraryServer.DataServiceBase
 {
     public class ConsultWorksDataService : MarshalByRefObject
     {
-        crudMysql crudmysql = new crudMysql("localhost", "poc", "houssamboudiar", "stormspirit99");
+        crudMysql crudmysql = new crudMysql("localhost", "poc", "root", "");
 
         public DataTable getAllWorks()
         {

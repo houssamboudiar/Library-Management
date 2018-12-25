@@ -11,7 +11,7 @@ namespace IRemote.Models
         private String title, theme, type;
         private int idWork;
 
-        public Work(List<string> tags, List<string> writers, string title, string theme, string type,int idWork)
+        public Work(List<string> tags, List<string> writers, string title, string theme, string type, int idWork)
         {
             this.Tags = tags;
             this.Writers = writers;

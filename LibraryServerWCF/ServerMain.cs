@@ -5,6 +5,8 @@ using System.Text;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using IRemoteWCF.Models;
+using IRemoteWCF.Control.DataServiceBase;
+using IRemoteWCF.Control;
 
 namespace LibraryServiceWCF
 {

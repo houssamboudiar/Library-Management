@@ -18,22 +18,42 @@ C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibraria
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\bin\Debug\ClassLibrary1.dll
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\bin\Debug\ClassLibrary1.pdb
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.csprojAssemblyReference.cache
+C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.DeleteWork.resources
+C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.Form1.resources
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.Properties.Resources.resources
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.csproj.GenerateResource.cache
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.csproj.CoreCompileInputs.cache
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.csproj.CopyComplete
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.exe
 C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.pdb
-C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.deleteWorkForm.resources
-C:\Users\houss\source\repos\Library Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.addWorkForm.resources
+D:\POC\TP\Library-Management-master\ClientLibrarian\bin\Debug\ClientLibrarian.exe.config
+D:\POC\TP\Library-Management-master\ClientLibrarian\bin\Debug\ClientLibrarian.exe
+D:\POC\TP\Library-Management-master\ClientLibrarian\bin\Debug\ClientLibrarian.pdb
+D:\POC\TP\Library-Management-master\ClientLibrarian\bin\Debug\ClassLibrary1.dll
+D:\POC\TP\Library-Management-master\ClientLibrarian\bin\Debug\ClassLibrary1.pdb
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.csprojAssemblyReference.cache
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.DeleteWork.resources
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.GetWork.resources
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.Properties.Resources.resources
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.csproj.GenerateResource.cache
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.csproj.CoreCompileInputs.cache
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.csproj.CopyComplete
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.exe
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.pdb
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.EditWork.resources
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.NewWork.resources
+D:\POC\TP\Library-Management-master\ClientLibrarian\obj\Debug\ClientLibrarian.ProfilLibrarian.resources
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\bin\Debug\ClientLibrarian.exe.config
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\bin\Debug\ClientLibrarian.exe
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\bin\Debug\ClientLibrarian.pdb
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\bin\Debug\ClassLibrary1.dll
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\bin\Debug\ClassLibrary1.pdb
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.csprojAssemblyReference.cache
-C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.deleteWorkForm.resources
-C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.addWorkForm.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.DeleteWork.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.EditWork.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.NewWork.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.GetWork.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.ProfilLibrarian.resources
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.Properties.Resources.resources
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.csproj.GenerateResource.cache
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientLibrarian\obj\Debug\ClientLibrarian.csproj.CoreCompileInputs.cache

@@ -25,19 +25,19 @@ namespace ClientLibrarianWCF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ManageWorksClient manageWorks = new ManageWorksClient("NetTcpBinding_IManageWorks");
+            //ManageWorksClient manageWorks = new ManageWorksClient("NetTcpBinding_IManageWorks");
             try
             {
                 int id = Convert.ToInt32(idwork.Text.ToString());
                 
-                if (manageWorks.DeleteWork(id))
+                /*if (manageWorks.DeleteWork(id))
                 {
                     MessageBox.Show("successful");
                 }
                 else
                 {
                     MessageBox.Show("failed");
-                }
+                }*/
             }
             catch(Exception ex)
             {

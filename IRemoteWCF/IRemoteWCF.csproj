@@ -47,9 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\ConsultWorks.cs" />
+    <Compile Include="Control\DataServiceBase\ManageUsersDataService.cs" />
     <Compile Include="Control\DataServiceBase\ConsultWorksDataService.cs" />
     <Compile Include="Control\DataServiceBase\crudMysql.cs" />
     <Compile Include="Control\DataServiceBase\ManageWorksDataService.cs" />
+    <Compile Include="Control\ManageUsers.cs" />
+    <Compile Include="Interfaces\IManageUsers.cs" />
     <Compile Include="Interfaces\oldArch\Implementation.cs" />
     <Compile Include="Control\ManageWorks.cs" />
     <Compile Include="Interfaces\oldArch\IClient.cs" />

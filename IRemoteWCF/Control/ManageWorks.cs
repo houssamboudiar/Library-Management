@@ -53,12 +53,12 @@ namespace IRemoteWCF
 
         public bool reserveWork(int idClient, int idWork)
         {
-            throw new NotImplementedException();
+            return manageWorksDataService.reservation(idWork , idClient);
         }
 
         public bool returnWork(int idWork, int idBorrower)
         {
-            throw new NotImplementedException();
+            return manageWorksDataService.rendreOuvrage(idWork,idBorrower);
         }
     }
 }
