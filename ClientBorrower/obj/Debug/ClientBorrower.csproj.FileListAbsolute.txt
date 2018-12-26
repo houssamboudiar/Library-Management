@@ -1,4 +1,3 @@
-C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\bin\Debug\ClientBorrower.exe.config
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\bin\Debug\ClientBorrower.exe
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\bin\Debug\ClientBorrower.pdb
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\bin\Debug\Bunifu_UI_v1.5.3.dll
@@ -14,3 +13,4 @@ C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\obj\Debug\ClientBorrower.ProfileTeacher.resources
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\obj\Debug\ClientBorrower.ConsultWorks.resources
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\obj\Debug\ClientBorrower.csprojAssemblyReference.cache
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\bin\Debug\ClientBorrower.exe.config

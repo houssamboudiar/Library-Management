@@ -51,12 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\ClientServerLibraryService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\LibrarianServerLibraryService\Reference.cs">
+    <Compile Include="Connected Services\ClientServerLibraryClient\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -117,60 +112,33 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\ClientServerLibraryService\ClientBorrower.ClientServerLibraryService.Account.datasource">
+    <None Include="app.config" />
+    <None Include="Connected Services\ClientServerLibraryClient\ClientBorrower.ClientServerLibraryClient.Account.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ClientServerLibraryService\ClientBorrower.ClientServerLibraryService.Borrower.datasource">
+    <None Include="Connected Services\ClientServerLibraryClient\ClientBorrower.ClientServerLibraryClient.Borrower.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ClientServerLibraryService\ClientBorrower.ClientServerLibraryService.Student.datasource">
+    <None Include="Connected Services\ClientServerLibraryClient\ClientBorrower.ClientServerLibraryClient.Student.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ClientServerLibraryService\ClientBorrower.ClientServerLibraryService.Teacher.datasource">
+    <None Include="Connected Services\ClientServerLibraryClient\ClientBorrower.ClientServerLibraryClient.Teacher.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ClientServerLibraryService\ClientBorrower.ClientServerLibraryService.Work.datasource">
+    <None Include="Connected Services\ClientServerLibraryClient\ClientBorrower.ClientServerLibraryClient.Work.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary.wsdl" />
-    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary.xsd">
+    <None Include="Connected Services\ClientServerLibraryClient\ClientServerLibrary.wsdl" />
+    <None Include="Connected Services\ClientServerLibraryClient\ClientServerLibrary.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary1.xsd">
+    <None Include="Connected Services\ClientServerLibraryClient\ClientServerLibrary1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary2.xsd">
+    <None Include="Connected Services\ClientServerLibraryClient\ClientServerLibrary2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\LibrarianServerLibraryService\ClientBorrower.LibrarianServerLibraryService.Account.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\LibrarianServerLibraryService\ClientBorrower.LibrarianServerLibraryService.Borrower.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\LibrarianServerLibraryService\ClientBorrower.LibrarianServerLibraryService.Student.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\LibrarianServerLibraryService\ClientBorrower.LibrarianServerLibraryService.Teacher.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\LibrarianServerLibraryService\ClientBorrower.LibrarianServerLibraryService.Work.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary.wsdl" />
-    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary3.xsd">
+    <None Include="Connected Services\ClientServerLibraryClient\ClientServerLibrary3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -184,41 +152,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ClientServerLibraryService\" />
-    <WCFMetadataStorage Include="Connected Services\LibrarianServerLibraryService\" />
+    <WCFMetadataStorage Include="Connected Services\ClientServerLibraryClient\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary.disco" />
+    <None Include="Connected Services\ClientServerLibraryClient\ClientServerLibrary.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ClientServerLibraryService\configuration91.svcinfo" />
+    <None Include="Connected Services\ClientServerLibraryClient\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ClientServerLibraryService\configuration.svcinfo" />
+    <None Include="Connected Services\ClientServerLibraryClient\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ClientServerLibraryService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\LibrarianServerLibraryService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\LibrarianServerLibraryService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\LibrarianServerLibraryService\Reference.svcmap">
+    <None Include="Connected Services\ClientServerLibraryClient\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

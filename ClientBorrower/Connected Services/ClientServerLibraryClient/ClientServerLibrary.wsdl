@@ -157,6 +157,12 @@
   <wsdl:message name="IClient_modifyUserTeacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:modifyUserTeacherResponse" />
   </wsdl:message>
+  <wsdl:message name="IClient_signout_InputMessage">
+    <wsdl:part name="parameters" element="tns:signout" />
+  </wsdl:message>
+  <wsdl:message name="IClient_signout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:signoutResponse" />
+  </wsdl:message>
   <wsdl:portType name="IClient">
     <wsdl:operation name="getAllWorks">
       <wsdl:input wsaw:Action="http://tempuri.org/IClient/getAllWorks" message="tns:IClient_getAllWorks_InputMessage" />
@@ -237,6 +243,10 @@
     <wsdl:operation name="modifyUserTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/IClient/modifyUserTeacher" message="tns:IClient_modifyUserTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClient/modifyUserTeacherResponse" message="tns:IClient_modifyUserTeacher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="signout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClient/signout" message="tns:IClient_signout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClient/signoutResponse" message="tns:IClient_signout_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IClient" type="tns:IClient">
@@ -421,6 +431,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="signout">
+      <soap:operation soapAction="http://tempuri.org/IClient/signout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="NetTcpBinding_IClient" type="tns:IClient">
     <wsp:PolicyReference URI="#NetTcpBinding_IClient_policy" />
@@ -598,6 +617,15 @@
     </wsdl:operation>
     <wsdl:operation name="modifyUserTeacher">
       <soap12:operation soapAction="http://tempuri.org/IClient/modifyUserTeacher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="signout">
+      <soap12:operation soapAction="http://tempuri.org/IClient/signout" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

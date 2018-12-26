@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Tq2DcZFfnLzs2yFTqDGrtSnSnV0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="cXserw4QiL6Wf4/5MzsuvYazRWw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IClient">
       <properties>
@@ -230,7 +230,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IClient" contract="ClientServerLibraryService.IClient" bindingType="basicHttpBinding" address="http://localhost:9001/ClientServerLibrary" bindingConfiguration="BasicHttpBinding_IClient">
+    <endpoint name="BasicHttpBinding_IClient" contract="ClientServerLibraryClient.IClient" bindingType="basicHttpBinding" address="http://localhost:9001/ClientServerLibrary" bindingConfiguration="BasicHttpBinding_IClient">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:9001/ClientServerLibrary</serializedValue>
@@ -245,7 +245,7 @@
           <serializedValue>BasicHttpBinding_IClient</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ClientServerLibraryService.IClient</serializedValue>
+          <serializedValue>ClientServerLibraryClient.IClient</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -315,7 +315,7 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="NetTcpBinding_IClient" contract="ClientServerLibraryService.IClient" bindingType="netTcpBinding" address="net.tcp://localhost:9002/ClientServerLibrary" bindingConfiguration="NetTcpBinding_IClient">
+    <endpoint name="NetTcpBinding_IClient" contract="ClientServerLibraryClient.IClient" bindingType="netTcpBinding" address="net.tcp://localhost:9002/ClientServerLibrary" bindingConfiguration="NetTcpBinding_IClient">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>net.tcp://localhost:9002/ClientServerLibrary</serializedValue>
@@ -330,7 +330,7 @@
           <serializedValue>NetTcpBinding_IClient</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ClientServerLibraryService.IClient</serializedValue>
+          <serializedValue>ClientServerLibraryClient.IClient</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

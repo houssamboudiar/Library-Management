@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClientBorrower.ClientServerLibraryService;
+using ClientBorrower.ClientServerLibraryClient;
 
 namespace ClientBorrower
 {
@@ -38,19 +38,21 @@ namespace ClientBorrower
 
         }
 
+        public event EventHandler LoggedIn;
+
         public void button1_Click(object sender, EventArgs e)
         {
             ClientClient clientService = new ClientClient("NetTcpBinding_IClient");
             string username = loginuserNametext.Text;
             string password = loginpasswordText.Text;
 
-            if (username.Length <= 8)
+            if (username.Length <= 7)
             {
                 MessageBox.Show("The username length should be greater than or equal to 8");
                 return;
             }
 
-            if (password.Length <= 8)
+            if (password.Length <= 7)
             {
                 MessageBox.Show("The password length should be greater than or equal to 8");
                 return;
@@ -84,15 +86,15 @@ namespace ClientBorrower
 
             if(clientService.authenticateUser(username, password))
             {
-                MessageBox.Show("Logged in !");
-
+                MessageBox.Show("Logged in"+ username +"!");
+                this.LoggedIn?.Invoke(username, e);
             }
             else
             {
                 MessageBox.Show("Please provide valide User Name and Password");
             }
         }
-        
+
         private void bunifuCustomLabel5_Click(object sender, EventArgs e)
         {
 

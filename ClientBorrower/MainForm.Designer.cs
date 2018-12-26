@@ -39,19 +39,23 @@
             this.appName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.username = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.consultWorks1 = new ClientBorrower.ConsultWorks();
-            this.profileTeacher1 = new ClientBorrower.ProfileTeacher();
             this.profileStudent1 = new ClientBorrower.ProfileStudent();
+            this.profileTeacher1 = new ClientBorrower.ProfileTeacher();
             this.loginControl1 = new ClientBorrower.LoginControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Snow;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.profileButton);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.label1);
@@ -118,6 +122,8 @@
             this.button3.Text = "  Sign-out";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Paint += new System.Windows.Forms.PaintEventHandler(this.button3_Paint);
             // 
             // button1
             // 
@@ -179,39 +185,68 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.username);
+            this.panel3.Controls.Add(this.bunifuCustomLabel3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(169, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(787, 67);
+            this.panel3.Size = new System.Drawing.Size(787, 61);
             this.panel3.TabIndex = 2;
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(19, 16);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(105, 22);
+            this.bunifuCustomLabel3.TabIndex = 8;
+            this.bunifuCustomLabel3.Text = "Welcome !";
+            this.bunifuCustomLabel3.Click += new System.EventHandler(this.bunifuCustomLabel3_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.consultWorks1);
+            this.panel2.Controls.Add(this.loginControl1);
             this.panel2.Controls.Add(this.profileTeacher1);
             this.panel2.Controls.Add(this.profileStudent1);
-            this.panel2.Controls.Add(this.loginControl1);
+            this.panel2.Controls.Add(this.consultWorks1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(169, 67);
+            this.panel2.Location = new System.Drawing.Point(169, 61);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(787, 449);
+            this.panel2.Size = new System.Drawing.Size(787, 455);
             this.panel2.TabIndex = 3;
+            // 
+            // username
+            // 
+            this.username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.username.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.username.Enabled = false;
+            this.username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.ForeColor = System.Drawing.SystemColors.Menu;
+            this.username.HintForeColor = System.Drawing.SystemColors.Menu;
+            this.username.HintText = "";
+            this.username.isPassword = false;
+            this.username.LineFocusedColor = System.Drawing.Color.Lavender;
+            this.username.LineIdleColor = System.Drawing.Color.Gainsboro;
+            this.username.LineMouseHoverColor = System.Drawing.Color.Lavender;
+            this.username.LineThickness = 3;
+            this.username.Location = new System.Drawing.Point(131, 4);
+            this.username.Margin = new System.Windows.Forms.Padding(4);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(143, 49);
+            this.username.TabIndex = 9;
+            this.username.Text = "Learner";
+            this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // consultWorks1
             // 
             this.consultWorks1.Location = new System.Drawing.Point(0, 0);
             this.consultWorks1.Name = "consultWorks1";
-            this.consultWorks1.Size = new System.Drawing.Size(787, 449);
-            this.consultWorks1.TabIndex = 5;
-            // 
-            // profileTeacher1
-            // 
-            this.profileTeacher1.BackColor = System.Drawing.SystemColors.Menu;
-            this.profileTeacher1.Location = new System.Drawing.Point(0, 0);
-            this.profileTeacher1.Name = "profileTeacher1";
-            this.profileTeacher1.Size = new System.Drawing.Size(787, 449);
-            this.profileTeacher1.TabIndex = 4;
+            this.consultWorks1.Size = new System.Drawing.Size(787, 469);
+            this.consultWorks1.TabIndex = 0;
             // 
             // profileStudent1
             // 
@@ -219,14 +254,23 @@
             this.profileStudent1.Location = new System.Drawing.Point(0, 0);
             this.profileStudent1.Name = "profileStudent1";
             this.profileStudent1.Size = new System.Drawing.Size(787, 449);
-            this.profileStudent1.TabIndex = 3;
+            this.profileStudent1.TabIndex = 1;
+            // 
+            // profileTeacher1
+            // 
+            this.profileTeacher1.BackColor = System.Drawing.SystemColors.Menu;
+            this.profileTeacher1.Location = new System.Drawing.Point(0, 0);
+            this.profileTeacher1.Name = "profileTeacher1";
+            this.profileTeacher1.Size = new System.Drawing.Size(787, 455);
+            this.profileTeacher1.TabIndex = 2;
             // 
             // loginControl1
             // 
             this.loginControl1.Location = new System.Drawing.Point(0, 0);
             this.loginControl1.Name = "loginControl1";
-            this.loginControl1.Size = new System.Drawing.Size(787, 449);
-            this.loginControl1.TabIndex = 2;
+            this.loginControl1.Size = new System.Drawing.Size(787, 471);
+            this.loginControl1.TabIndex = 3;
+            this.loginControl1.LoggedIn += new System.EventHandler(this.loggedIn);
             // 
             // MainForm
             // 
@@ -247,6 +291,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -265,6 +311,8 @@
         private System.Windows.Forms.Button profileButton;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox username;
         private LoginControl loginControl1;
         private ProfileTeacher profileTeacher1;
         private ProfileStudent profileStudent1;

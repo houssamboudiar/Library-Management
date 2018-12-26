@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClientBorrower.ClientServerLibraryClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,10 @@ namespace ClientBorrower
             SidePanel.Height = loginButton.Height;
             SidePanel.Top = loginButton.Top;
             loginControl1.BringToFront();
+            button3.Enabled = false;
+            profileButton.Enabled = false;
+            button1.Enabled = false;
+
 
         }
 
@@ -35,21 +40,17 @@ namespace ClientBorrower
         {
 
         }
-
         private void loginButton_Click(object sender, EventArgs e)
         {
             SidePanel.Height = loginButton.Height;
             SidePanel.Top = loginButton.Top;
             loginControl1.BringToFront();
-
         }
-
-        public delegate void LoggedSucced(Panel SidePanel , String usertype , ProfileStudent profileStudent , ProfileTeacher profileTeacher , Button loginButton , Button button3);
-        public LoggedSucced OnClickChange { get; set; }
 
         private void button4_Click(object sender, EventArgs e)
         {
             SidePanel.Height = profileButton.Height;
+
             SidePanel.Top = profileButton.Top;
             String usertype = "Student";
             if(usertype == "Student")
@@ -83,6 +84,60 @@ namespace ClientBorrower
             SidePanel.Top = button1.Top;
             consultWorks1.BringToFront();
             
+        }
+
+        private void consultWorks1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loggedIn(object sender, EventArgs e)
+        {
+            username.Text = (string)sender;
+            SidePanel.Height = profileButton.Height;
+            SidePanel.Top = profileButton.Top;
+            String usertype = "Student";
+            if (usertype == "Student")
+            {
+                profileStudent1.BringToFront();
+            }
+            else
+            {
+                profileTeacher1.BringToFront();
+            }
+            loginButton.Enabled = false;
+            button3.Enabled = true;
+            profileButton.Enabled = true;
+            button1.Enabled = true;
+            }
+
+        private void button3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ClientClient clientService = new ClientClient("NetTcpBinding_IClient");
+            clientService.signout();
+            username.Text = "Learner";
+            SidePanel.Height = loginButton.Height;
+            SidePanel.Top = loginButton.Top;
+            loginControl1.BringToFront();
+            button3.Enabled = false;
+            profileButton.Enabled = false;
+            button1.Enabled = false;
+
+        }
+
+        private void loginControl1_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomLabel3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

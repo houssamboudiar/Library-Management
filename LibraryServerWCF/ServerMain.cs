@@ -24,11 +24,9 @@ namespace LibraryServiceWCF
                 svcLibrarianServerLibrary.Open();
 
                 Console.WriteLine("\n\nService is Running  at following address");
-                Console.WriteLine("\nhttp://localhost:9001/ClientServerLibrary");
                 Console.WriteLine("\nnet.tcp://localhost:9002/ClientServerLibrary");
 
                 Console.WriteLine("\n\nService is Running  at following address");
-                Console.WriteLine("\nhttp://localhost:9001/LibrarianServerLibrary");
                 Console.WriteLine("\nnet.tcp://localhost:9002/LibrarianServerLibrary");
 
                 Console.ReadLine();

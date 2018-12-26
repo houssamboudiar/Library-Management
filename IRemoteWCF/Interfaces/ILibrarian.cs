@@ -12,6 +12,7 @@ namespace IRemoteWCF
     public interface ILibrarian
     {
         // Manage Works
+
         [OperationContract]
         Boolean AddWork(List<string> tags, List<string> writers, string title, string theme, string type);
 

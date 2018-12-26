@@ -74,7 +74,7 @@
             this.loginPanel.ForeColor = System.Drawing.Color.White;
             this.loginPanel.Location = new System.Drawing.Point(0, 0);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(302, 449);
+            this.loginPanel.Size = new System.Drawing.Size(301, 471);
             this.loginPanel.TabIndex = 0;
             this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.loginPanel_Paint);
             // 
@@ -387,7 +387,7 @@
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(299, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(488, 449);
+            this.panel1.Size = new System.Drawing.Size(488, 471);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -491,7 +491,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.loginPanel);
             this.Name = "LoginControl";
-            this.Size = new System.Drawing.Size(787, 449);
+            this.Size = new System.Drawing.Size(787, 471);
             this.Load += new System.EventHandler(this.LoginControl_Load);
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
