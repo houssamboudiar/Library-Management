@@ -46,19 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\ConsultWorks.cs" />
+    <Compile Include="Control\LibrarianServerLibrary.cs" />
+    <Compile Include="Interfaces\oldArch\ConsultWorks.cs" />
     <Compile Include="Control\DataServiceBase\ManageUsersDataService.cs" />
     <Compile Include="Control\DataServiceBase\ConsultWorksDataService.cs" />
     <Compile Include="Control\DataServiceBase\crudMysql.cs" />
     <Compile Include="Control\DataServiceBase\ManageWorksDataService.cs" />
-    <Compile Include="Control\ManageUsers.cs" />
-    <Compile Include="Interfaces\IManageUsers.cs" />
-    <Compile Include="Interfaces\oldArch\Implementation.cs" />
-    <Compile Include="Control\ManageWorks.cs" />
-    <Compile Include="Interfaces\oldArch\IClient.cs" />
-    <Compile Include="Interfaces\IConsultWorks.cs" />
-    <Compile Include="Interfaces\oldArch\ILibrarian.cs" />
-    <Compile Include="Interfaces\IManageWorks.cs" />
+    <Compile Include="Interfaces\oldArch\ManageUsers.cs" />
+    <Compile Include="Interfaces\oldArch\IManageUsers.cs" />
+    <Compile Include="Control\ClientServerLibrary.cs" />
+    <Compile Include="Interfaces\oldArch\ManageWorks.cs" />
+    <Compile Include="Interfaces\IClient.cs" />
+    <Compile Include="Interfaces\oldArch\IConsultWorks.cs" />
+    <Compile Include="Interfaces\ILibrarian.cs" />
+    <Compile Include="Interfaces\oldArch\IManageWorks.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Borrower.cs" />
     <Compile Include="Models\Borrowing.cs" />

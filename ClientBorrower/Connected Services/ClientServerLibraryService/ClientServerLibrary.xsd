@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9001/ClientServerLibrary?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" />
+  <xs:element name="getAllWorks">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllWorksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getAllWorksResult" nillable="true" type="q1:ArrayOfWork" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idWork" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getByIdResult" nillable="true" type="q2:Work" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getByTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="titre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getByTitleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getByTitleResult" nillable="true" type="q3:ArrayOfWork" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getByWriter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="writer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getByWriterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getByWriterResult" nillable="true" type="q4:ArrayOfWork" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getByTags">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mot_cle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getByTagsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getByTagsResult" nillable="true" type="q5:ArrayOfWork" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getByTheme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="theme" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getByThemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getByThemeResult" nillable="true" type="q6:ArrayOfWork" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reserveWork">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idClient" type="xs:int" />
+        <xs:element minOccurs="0" name="idWork" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reserveWorkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reserveWorkResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addUserStudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passWord" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prenom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="specialty" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="niv" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addUserStudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addUserStudentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addUserTeacher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passWord" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prenom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="grade" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addUserTeacherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addUserTeacherResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="authenticateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passWord" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="authenticateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authenticateUserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllUsers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getAllUsersResult" nillable="true" type="q7:ArrayOfAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getUserResult" nillable="true" type="q8:Account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllBorrowers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllBorrowersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getAllBorrowersResult" nillable="true" type="q9:ArrayOfBorrower" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBorrower">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdCard" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBorrowerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getBorrowerResult" nillable="true" type="q10:Borrower" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllStudents">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllStudentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getAllStudentsResult" nillable="true" type="q11:ArrayOfStudent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdCard" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getStudentResult" nillable="true" type="q12:Student" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllTeachers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllTeachersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getAllTeachersResult" nillable="true" type="q13:ArrayOfTeacher" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTeacher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdCard" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTeacherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getTeacherResult" nillable="true" type="q14:Teacher" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modifyUserStudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passWord" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CardID" type="xs:int" />
+        <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prenom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="specialty" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Niveau" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modifyUserStudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="modifyUserStudentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modifyUserTeacher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passWord" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CardID" type="xs:int" />
+        <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prenom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="grade" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modifyUserTeacherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="modifyUserTeacherResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

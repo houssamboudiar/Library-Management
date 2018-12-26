@@ -16,7 +16,7 @@ namespace LibraryServer.Control
 
         public bool AddWork(List<string> tags, List<string> writers, string title, string theme, string type)
         {
-            Work work = new Work(tags, writers, title, theme, type, idWork);
+            Work work = new Work(tags, writers, title, theme, type, 0);
             return manageWorksDataService.addWorkDataService(work);
         }
         public bool ConfirmWork(int idWork, int idBorrower)
@@ -36,7 +36,6 @@ namespace LibraryServer.Control
         }
 
         ConsultWorksDataService consultWorksDataService = new ConsultWorksDataService();
-        private int idWork;
 
         public List<Work> getAllWorks()
         {

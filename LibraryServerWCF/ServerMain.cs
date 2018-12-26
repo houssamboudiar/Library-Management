@@ -14,39 +14,40 @@ namespace LibraryServiceWCF
     {
         static void Main(string[] args)
         {
-            ServiceHost svcConsultWorks = null;
-            ServiceHost svcManageWorks = null;
+            ServiceHost svcClientServerLibrary = null;
+            ServiceHost svcLibrarianServerLibrary = null;
             try
             {
-                svcConsultWorks = new ServiceHost(typeof(IRemoteWCF.ConsultWorks));
-                svcManageWorks = new ServiceHost(typeof(IRemoteWCF.ManageWorks));
-                svcConsultWorks.Open();
-                svcManageWorks.Open();
-                Console.WriteLine("\n\nService is Running  at following address");
-                Console.WriteLine("\nhttp://localhost:9001/ConsultWorks");
-                Console.WriteLine("\nnet.tcp://localhost:9002/ConsultWorks   ");
+                svcClientServerLibrary = new ServiceHost(typeof(IRemoteWCF.ClientServerLibrary));
+                svcLibrarianServerLibrary = new ServiceHost(typeof(IRemoteWCF.LibrarianServerLibrary));
+                svcClientServerLibrary.Open();
+                svcLibrarianServerLibrary.Open();
 
                 Console.WriteLine("\n\nService is Running  at following address");
-                Console.WriteLine("\nhttp://localhost:9001/ManageWorks");
-                Console.WriteLine("\nnet.tcp://localhost:9002/ManageWorks   ");
+                Console.WriteLine("\nhttp://localhost:9001/ClientServerLibrary");
+                Console.WriteLine("\nnet.tcp://localhost:9002/ClientServerLibrary");
+
+                Console.WriteLine("\n\nService is Running  at following address");
+                Console.WriteLine("\nhttp://localhost:9001/LibrarianServerLibrary");
+                Console.WriteLine("\nnet.tcp://localhost:9002/LibrarianServerLibrary");
 
                 Console.ReadLine();
             }
             catch (Exception eX)
             {
-                svcConsultWorks = null;
-                svcManageWorks = null;
+                svcClientServerLibrary = null;
+                svcLibrarianServerLibrary = null;
                 Console.WriteLine("Service can not be started \n\nError Message [" + eX.Message + "]");
                 Console.ReadLine();
             }
-            if (svcConsultWorks != null && svcManageWorks != null)
+            if (svcClientServerLibrary != null || svcLibrarianServerLibrary != null)
             {
                 Console.WriteLine("\nPress any key to close the Service");
                 Console.ReadKey();
-                svcConsultWorks.Close();
-                svcManageWorks.Close();
-                svcConsultWorks = null;
-                svcManageWorks = null;
+                svcClientServerLibrary.Close();
+                svcLibrarianServerLibrary.Close();
+                svcClientServerLibrary = null;
+                svcLibrarianServerLibrary = null;
             }
             Console.ReadLine();
         }

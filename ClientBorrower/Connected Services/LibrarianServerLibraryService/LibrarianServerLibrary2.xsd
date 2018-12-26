@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9001/LibrarianServerLibrary?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfWork">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Work" nillable="true" type="tns:Work" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWork" nillable="true" type="tns:ArrayOfWork" />
+  <xs:complexType name="Work">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdWork" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Tags" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Theme" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Writers" nillable="true" type="q2:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Work" nillable="true" type="tns:Work" />
+  <xs:complexType name="ArrayOfAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Account" nillable="true" type="tns:Account" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccount" nillable="true" type="tns:ArrayOfAccount" />
+  <xs:complexType name="Account">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PassWord" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:complexType name="ArrayOfBorrower">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Borrower" nillable="true" type="tns:Borrower" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBorrower" nillable="true" type="tns:ArrayOfBorrower" />
+  <xs:complexType name="Borrower">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="tns:Account" />
+      <xs:element minOccurs="0" name="CardID1" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Borrower" nillable="true" type="tns:Borrower" />
+  <xs:complexType name="ArrayOfStudent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Student" nillable="true" type="tns:Student" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStudent" nillable="true" type="tns:ArrayOfStudent" />
+  <xs:complexType name="Student">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Student" nillable="true" type="tns:Student" />
+  <xs:complexType name="ArrayOfTeacher">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Teacher" nillable="true" type="tns:Teacher" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTeacher" nillable="true" type="tns:ArrayOfTeacher" />
+  <xs:complexType name="Teacher">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Borrower" nillable="true" type="tns:Borrower" />
+      <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Teacher" nillable="true" type="tns:Teacher" />
+</xs:schema>

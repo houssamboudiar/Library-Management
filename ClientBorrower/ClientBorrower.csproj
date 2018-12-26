@@ -38,6 +38,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +51,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\ClientServerLibraryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\LibrarianServerLibraryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultWorks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConsultWorks.Designer.cs">
+      <DependentUpon>ConsultWorks.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -61,13 +79,34 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfileStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfileStudent.Designer.cs">
+      <DependentUpon>ProfileStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfileTeacher.Designer.cs">
+      <DependentUpon>ProfileTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConsultWorks.resx">
+      <DependentUpon>ConsultWorks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginControl.resx">
       <DependentUpon>LoginControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileStudent.resx">
+      <DependentUpon>ProfileStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileTeacher.resx">
+      <DependentUpon>ProfileTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +117,62 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Connected Services\ClientServerLibraryService\ClientBorrower.ClientServerLibraryService.Account.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClientServerLibraryService\ClientBorrower.ClientServerLibraryService.Borrower.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClientServerLibraryService\ClientBorrower.ClientServerLibraryService.Student.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClientServerLibraryService\ClientBorrower.ClientServerLibraryService.Teacher.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClientServerLibraryService\ClientBorrower.ClientServerLibraryService.Work.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary.wsdl" />
+    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LibrarianServerLibraryService\ClientBorrower.LibrarianServerLibraryService.Account.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibrarianServerLibraryService\ClientBorrower.LibrarianServerLibraryService.Borrower.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibrarianServerLibraryService\ClientBorrower.LibrarianServerLibraryService.Student.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibrarianServerLibraryService\ClientBorrower.LibrarianServerLibraryService.Teacher.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibrarianServerLibraryService\ClientBorrower.LibrarianServerLibraryService.Work.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary.wsdl" />
+    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,6 +185,43 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ClientServerLibraryService\" />
+    <WCFMetadataStorage Include="Connected Services\LibrarianServerLibraryService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClientServerLibraryService\ClientServerLibrary.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClientServerLibraryService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClientServerLibraryService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClientServerLibraryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LibrarianServerLibraryService\LibrarianServerLibrary.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LibrarianServerLibraryService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LibrarianServerLibraryService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LibrarianServerLibraryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
