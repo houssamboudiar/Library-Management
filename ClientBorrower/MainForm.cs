@@ -44,6 +44,9 @@ namespace ClientBorrower
 
         }
 
+        public delegate void LoggedSucced(Panel SidePanel , String usertype , ProfileStudent profileStudent , ProfileTeacher profileTeacher , Button loginButton , Button button3);
+        public LoggedSucced OnClickChange { get; set; }
+
         private void button4_Click(object sender, EventArgs e)
         {
             SidePanel.Height = profileButton.Height;

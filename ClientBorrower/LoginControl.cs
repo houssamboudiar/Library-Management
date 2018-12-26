@@ -38,14 +38,61 @@ namespace ClientBorrower
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             ClientClient clientService = new ClientClient("NetTcpBinding_IClient");
             string username = loginuserNametext.Text;
             string password = loginpasswordText.Text;
-            clientService.authenticateUser(username , password);
-        }
 
+            if (username.Length <= 8)
+            {
+                MessageBox.Show("The username length should be greater than or equal to 8");
+                return;
+            }
+
+            if (password.Length <= 8)
+            {
+                MessageBox.Show("The password length should be greater than or equal to 8");
+                return;
+
+            }
+
+            string specialChar = @"\|!#$%&/()=?»«@£§€{}.-;'<>_,";
+            foreach (var item in specialChar)
+            {
+                if (username.Contains(item))
+                {
+                    MessageBox.Show("Contains username special char");
+                    return;
+                }
+            }
+
+            foreach (var item in specialChar)
+            {
+                if (password.Contains(item))
+                {
+                    MessageBox.Show("Contains password special char");
+                    return;
+                }
+            }
+
+
+            if (string.IsNullOrEmpty(username) | string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please Provide User Name and Password !");
+            }
+
+            if(clientService.authenticateUser(username, password))
+            {
+                MessageBox.Show("Logged in !");
+
+            }
+            else
+            {
+                MessageBox.Show("Please provide valide User Name and Password");
+            }
+        }
+        
         private void bunifuCustomLabel5_Click(object sender, EventArgs e)
         {
 
@@ -83,13 +130,27 @@ namespace ClientBorrower
 
         private void button2_Click(object sender, EventArgs e)
         {
+            /*
             ClientClient clientService = new ClientClient("NetTcpBinding_IClient");
+
+
+
             string username = usernametextbox.Text;
             string id = idcardtextbox.Text;
             string fname = firstname.Text;
             string lname = lastName.Text;
             string password = signpassword.Text;
             string passwordc = signpasswordc.Text;
+
+            if (password.Equals(passwordc))
+            {
+                bool form = true;
+            }
+            else
+            {
+                bool form = true;
+            }
+
             string type = "Etudiant";
             if (bunifuCheckbox1.Checked && !bunifuCheckbox2.Checked)
             {
@@ -100,7 +161,7 @@ namespace ClientBorrower
                 type = "Enseignant";
             }
 
-            //clientService.addUserStudent();
+            //clientService.addUserStudent();*/
         }
 
         private void bunifuCustomLabel7_Click(object sender, EventArgs e)

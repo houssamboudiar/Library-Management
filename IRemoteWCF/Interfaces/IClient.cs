@@ -9,7 +9,7 @@ using IRemoteWCF.Models;
 
 namespace IRemoteWCF
 {
-    [ServiceContract(SessionMode = SessionMode.Allowed)]
+    [ServiceContract(SessionMode = SessionMode.Required)]
     public interface IClient
     {
         // Consult Works
