@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:9001/ClientServerLibrary?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:9001/LibrarianServerLibrary?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:complexType name="ArrayOfWork">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Work" nillable="true" type="tns:Work" />

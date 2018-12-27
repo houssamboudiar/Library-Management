@@ -366,5 +366,11 @@ namespace IRemoteWCF
             return manageUsers.modifyUserTeacher(teacher);
         }
 
+
+        public bool signout()
+        {
+            return true;
+        }
+
     }
 }

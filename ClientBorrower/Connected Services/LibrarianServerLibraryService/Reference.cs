@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClientBorrower.ClientServerLibraryClient {
+namespace ClientBorrower.LibrarianServerLibraryService {
     using System.Runtime.Serialization;
     using System;
     
@@ -225,7 +225,7 @@ namespace ClientBorrower.ClientServerLibraryClient {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ClientBorrower.ClientServerLibraryClient.Account AccountField;
+        private ClientBorrower.LibrarianServerLibraryService.Account AccountField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int CardID1Field;
@@ -247,7 +247,7 @@ namespace ClientBorrower.ClientServerLibraryClient {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ClientBorrower.ClientServerLibraryClient.Account Account {
+        public ClientBorrower.LibrarianServerLibraryService.Account Account {
             get {
                 return this.AccountField;
             }
@@ -347,7 +347,7 @@ namespace ClientBorrower.ClientServerLibraryClient {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ClientBorrower.ClientServerLibraryClient.Borrower BorrowerField;
+        private ClientBorrower.LibrarianServerLibraryService.Borrower BorrowerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string GradeField;
@@ -363,7 +363,7 @@ namespace ClientBorrower.ClientServerLibraryClient {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ClientBorrower.ClientServerLibraryClient.Borrower Borrower {
+        public ClientBorrower.LibrarianServerLibraryService.Borrower Borrower {
             get {
                 return this.BorrowerField;
             }
@@ -399,190 +399,190 @@ namespace ClientBorrower.ClientServerLibraryClient {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ClientServerLibraryClient.IClient")]
-    public interface IClient {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="LibrarianServerLibraryService.ILibrarian")]
+    public interface ILibrarian {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/AddWork", ReplyAction="http://tempuri.org/IClient/AddWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/AddWork", ReplyAction="http://tempuri.org/ILibrarian/AddWorkResponse")]
         bool AddWork(System.Collections.Generic.List<string> tags, System.Collections.Generic.List<string> writers, string title, string theme, string type);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/AddWork", ReplyAction="http://tempuri.org/IClient/AddWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/AddWork", ReplyAction="http://tempuri.org/ILibrarian/AddWorkResponse")]
         System.Threading.Tasks.Task<bool> AddWorkAsync(System.Collections.Generic.List<string> tags, System.Collections.Generic.List<string> writers, string title, string theme, string type);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/EditWork", ReplyAction="http://tempuri.org/IClient/EditWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/EditWork", ReplyAction="http://tempuri.org/ILibrarian/EditWorkResponse")]
         bool EditWork(int idWork, System.Collections.Generic.List<string> tags, System.Collections.Generic.List<string> writers, string title, string theme, string type);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/EditWork", ReplyAction="http://tempuri.org/IClient/EditWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/EditWork", ReplyAction="http://tempuri.org/ILibrarian/EditWorkResponse")]
         System.Threading.Tasks.Task<bool> EditWorkAsync(int idWork, System.Collections.Generic.List<string> tags, System.Collections.Generic.List<string> writers, string title, string theme, string type);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/DeleteWork", ReplyAction="http://tempuri.org/IClient/DeleteWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/DeleteWork", ReplyAction="http://tempuri.org/ILibrarian/DeleteWorkResponse")]
         bool DeleteWork(int idWork);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/DeleteWork", ReplyAction="http://tempuri.org/IClient/DeleteWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/DeleteWork", ReplyAction="http://tempuri.org/ILibrarian/DeleteWorkResponse")]
         System.Threading.Tasks.Task<bool> DeleteWorkAsync(int idWork);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/ConfirmWork", ReplyAction="http://tempuri.org/IClient/ConfirmWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/ConfirmWork", ReplyAction="http://tempuri.org/ILibrarian/ConfirmWorkResponse")]
         bool ConfirmWork(int idWork, int idBorrower);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/ConfirmWork", ReplyAction="http://tempuri.org/IClient/ConfirmWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/ConfirmWork", ReplyAction="http://tempuri.org/ILibrarian/ConfirmWorkResponse")]
         System.Threading.Tasks.Task<bool> ConfirmWorkAsync(int idWork, int idBorrower);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/returnWork", ReplyAction="http://tempuri.org/IClient/returnWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/returnWork", ReplyAction="http://tempuri.org/ILibrarian/returnWorkResponse")]
         bool returnWork(int idWork, int idBorrower);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/returnWork", ReplyAction="http://tempuri.org/IClient/returnWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/returnWork", ReplyAction="http://tempuri.org/ILibrarian/returnWorkResponse")]
         System.Threading.Tasks.Task<bool> returnWorkAsync(int idWork, int idBorrower);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/reserveWork", ReplyAction="http://tempuri.org/IClient/reserveWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/reserveWork", ReplyAction="http://tempuri.org/ILibrarian/reserveWorkResponse")]
         bool reserveWork(int idClient, int idWork);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/reserveWork", ReplyAction="http://tempuri.org/IClient/reserveWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/reserveWork", ReplyAction="http://tempuri.org/ILibrarian/reserveWorkResponse")]
         System.Threading.Tasks.Task<bool> reserveWorkAsync(int idClient, int idWork);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllWorks", ReplyAction="http://tempuri.org/IClient/getAllWorksResponse")]
-        System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getAllWorks();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getAllWorks", ReplyAction="http://tempuri.org/ILibrarian/getAllWorksResponse")]
+        System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work> getAllWorks();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllWorks", ReplyAction="http://tempuri.org/IClient/getAllWorksResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getAllWorksAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getAllWorks", ReplyAction="http://tempuri.org/ILibrarian/getAllWorksResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work>> getAllWorksAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getById", ReplyAction="http://tempuri.org/IClient/getByIdResponse")]
-        ClientBorrower.ClientServerLibraryClient.Work getById(int idWork);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getById", ReplyAction="http://tempuri.org/ILibrarian/getByIdResponse")]
+        ClientBorrower.LibrarianServerLibraryService.Work getById(int idWork);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getById", ReplyAction="http://tempuri.org/IClient/getByIdResponse")]
-        System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Work> getByIdAsync(int idWork);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getById", ReplyAction="http://tempuri.org/ILibrarian/getByIdResponse")]
+        System.Threading.Tasks.Task<ClientBorrower.LibrarianServerLibraryService.Work> getByIdAsync(int idWork);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getByTitle", ReplyAction="http://tempuri.org/IClient/getByTitleResponse")]
-        System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getByTitle(string titre);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getByTitle", ReplyAction="http://tempuri.org/ILibrarian/getByTitleResponse")]
+        System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work> getByTitle(string titre);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getByTitle", ReplyAction="http://tempuri.org/IClient/getByTitleResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getByTitleAsync(string titre);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getByTitle", ReplyAction="http://tempuri.org/ILibrarian/getByTitleResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work>> getByTitleAsync(string titre);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getByWriter", ReplyAction="http://tempuri.org/IClient/getByWriterResponse")]
-        System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getByWriter(string writer);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getByWriter", ReplyAction="http://tempuri.org/ILibrarian/getByWriterResponse")]
+        System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work> getByWriter(string writer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getByWriter", ReplyAction="http://tempuri.org/IClient/getByWriterResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getByWriterAsync(string writer);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getByWriter", ReplyAction="http://tempuri.org/ILibrarian/getByWriterResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work>> getByWriterAsync(string writer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getByTags", ReplyAction="http://tempuri.org/IClient/getByTagsResponse")]
-        System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getByTags(string mot_cle);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getByTags", ReplyAction="http://tempuri.org/ILibrarian/getByTagsResponse")]
+        System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work> getByTags(string mot_cle);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getByTags", ReplyAction="http://tempuri.org/IClient/getByTagsResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getByTagsAsync(string mot_cle);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getByTags", ReplyAction="http://tempuri.org/ILibrarian/getByTagsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work>> getByTagsAsync(string mot_cle);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getByTheme", ReplyAction="http://tempuri.org/IClient/getByThemeResponse")]
-        System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getByTheme(string theme);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getByTheme", ReplyAction="http://tempuri.org/ILibrarian/getByThemeResponse")]
+        System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work> getByTheme(string theme);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getByTheme", ReplyAction="http://tempuri.org/IClient/getByThemeResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getByThemeAsync(string theme);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getByTheme", ReplyAction="http://tempuri.org/ILibrarian/getByThemeResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work>> getByThemeAsync(string theme);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/addUserStudent", ReplyAction="http://tempuri.org/IClient/addUserStudentResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/addUserStudent", ReplyAction="http://tempuri.org/ILibrarian/addUserStudentResponse")]
         bool addUserStudent(string UserName, string passWord, int id, string nom, string prenom, string specialty, string niv);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/addUserStudent", ReplyAction="http://tempuri.org/IClient/addUserStudentResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/addUserStudent", ReplyAction="http://tempuri.org/ILibrarian/addUserStudentResponse")]
         System.Threading.Tasks.Task<bool> addUserStudentAsync(string UserName, string passWord, int id, string nom, string prenom, string specialty, string niv);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/addUserTeacher", ReplyAction="http://tempuri.org/IClient/addUserTeacherResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/addUserTeacher", ReplyAction="http://tempuri.org/ILibrarian/addUserTeacherResponse")]
         bool addUserTeacher(string UserName, string passWord, int id, string nom, string prenom, string grade);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/addUserTeacher", ReplyAction="http://tempuri.org/IClient/addUserTeacherResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/addUserTeacher", ReplyAction="http://tempuri.org/ILibrarian/addUserTeacherResponse")]
         System.Threading.Tasks.Task<bool> addUserTeacherAsync(string UserName, string passWord, int id, string nom, string prenom, string grade);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/authenticateUser", ReplyAction="http://tempuri.org/IClient/authenticateUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/authenticateUser", ReplyAction="http://tempuri.org/ILibrarian/authenticateUserResponse")]
         bool authenticateUser(string userName, string passWord);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/authenticateUser", ReplyAction="http://tempuri.org/IClient/authenticateUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/authenticateUser", ReplyAction="http://tempuri.org/ILibrarian/authenticateUserResponse")]
         System.Threading.Tasks.Task<bool> authenticateUserAsync(string userName, string passWord);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllUsers", ReplyAction="http://tempuri.org/IClient/getAllUsersResponse")]
-        System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Account> getAllUsers();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getAllUsers", ReplyAction="http://tempuri.org/ILibrarian/getAllUsersResponse")]
+        System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Account> getAllUsers();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllUsers", ReplyAction="http://tempuri.org/IClient/getAllUsersResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Account>> getAllUsersAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getAllUsers", ReplyAction="http://tempuri.org/ILibrarian/getAllUsersResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Account>> getAllUsersAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getUser", ReplyAction="http://tempuri.org/IClient/getUserResponse")]
-        ClientBorrower.ClientServerLibraryClient.Account getUser(string username);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getUser", ReplyAction="http://tempuri.org/ILibrarian/getUserResponse")]
+        ClientBorrower.LibrarianServerLibraryService.Account getUser(string username);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getUser", ReplyAction="http://tempuri.org/IClient/getUserResponse")]
-        System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Account> getUserAsync(string username);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getUser", ReplyAction="http://tempuri.org/ILibrarian/getUserResponse")]
+        System.Threading.Tasks.Task<ClientBorrower.LibrarianServerLibraryService.Account> getUserAsync(string username);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllBorrowers", ReplyAction="http://tempuri.org/IClient/getAllBorrowersResponse")]
-        System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Borrower> getAllBorrowers();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getAllBorrowers", ReplyAction="http://tempuri.org/ILibrarian/getAllBorrowersResponse")]
+        System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Borrower> getAllBorrowers();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllBorrowers", ReplyAction="http://tempuri.org/IClient/getAllBorrowersResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Borrower>> getAllBorrowersAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getAllBorrowers", ReplyAction="http://tempuri.org/ILibrarian/getAllBorrowersResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Borrower>> getAllBorrowersAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getBorrower", ReplyAction="http://tempuri.org/IClient/getBorrowerResponse")]
-        ClientBorrower.ClientServerLibraryClient.Borrower getBorrower(int IdCard);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getBorrower", ReplyAction="http://tempuri.org/ILibrarian/getBorrowerResponse")]
+        ClientBorrower.LibrarianServerLibraryService.Borrower getBorrower(int IdCard);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getBorrower", ReplyAction="http://tempuri.org/IClient/getBorrowerResponse")]
-        System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Borrower> getBorrowerAsync(int IdCard);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getBorrower", ReplyAction="http://tempuri.org/ILibrarian/getBorrowerResponse")]
+        System.Threading.Tasks.Task<ClientBorrower.LibrarianServerLibraryService.Borrower> getBorrowerAsync(int IdCard);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllStudents", ReplyAction="http://tempuri.org/IClient/getAllStudentsResponse")]
-        System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Student> getAllStudents();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getAllStudents", ReplyAction="http://tempuri.org/ILibrarian/getAllStudentsResponse")]
+        System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Student> getAllStudents();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllStudents", ReplyAction="http://tempuri.org/IClient/getAllStudentsResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Student>> getAllStudentsAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getAllStudents", ReplyAction="http://tempuri.org/ILibrarian/getAllStudentsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Student>> getAllStudentsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getStudent", ReplyAction="http://tempuri.org/IClient/getStudentResponse")]
-        ClientBorrower.ClientServerLibraryClient.Student getStudent(int IdCard);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getStudent", ReplyAction="http://tempuri.org/ILibrarian/getStudentResponse")]
+        ClientBorrower.LibrarianServerLibraryService.Student getStudent(int IdCard);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getStudent", ReplyAction="http://tempuri.org/IClient/getStudentResponse")]
-        System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Student> getStudentAsync(int IdCard);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getStudent", ReplyAction="http://tempuri.org/ILibrarian/getStudentResponse")]
+        System.Threading.Tasks.Task<ClientBorrower.LibrarianServerLibraryService.Student> getStudentAsync(int IdCard);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllTeachers", ReplyAction="http://tempuri.org/IClient/getAllTeachersResponse")]
-        System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Teacher> getAllTeachers();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getAllTeachers", ReplyAction="http://tempuri.org/ILibrarian/getAllTeachersResponse")]
+        System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Teacher> getAllTeachers();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllTeachers", ReplyAction="http://tempuri.org/IClient/getAllTeachersResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Teacher>> getAllTeachersAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getAllTeachers", ReplyAction="http://tempuri.org/ILibrarian/getAllTeachersResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Teacher>> getAllTeachersAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getTeacher", ReplyAction="http://tempuri.org/IClient/getTeacherResponse")]
-        ClientBorrower.ClientServerLibraryClient.Teacher getTeacher(int IdCard);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getTeacher", ReplyAction="http://tempuri.org/ILibrarian/getTeacherResponse")]
+        ClientBorrower.LibrarianServerLibraryService.Teacher getTeacher(int IdCard);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getTeacher", ReplyAction="http://tempuri.org/IClient/getTeacherResponse")]
-        System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Teacher> getTeacherAsync(int IdCard);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/getTeacher", ReplyAction="http://tempuri.org/ILibrarian/getTeacherResponse")]
+        System.Threading.Tasks.Task<ClientBorrower.LibrarianServerLibraryService.Teacher> getTeacherAsync(int IdCard);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/modifyUserStudent", ReplyAction="http://tempuri.org/IClient/modifyUserStudentResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/modifyUserStudent", ReplyAction="http://tempuri.org/ILibrarian/modifyUserStudentResponse")]
         bool modifyUserStudent(string UserName, string passWord, int CardID, string nom, string prenom, string specialty, string Niveau);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/modifyUserStudent", ReplyAction="http://tempuri.org/IClient/modifyUserStudentResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/modifyUserStudent", ReplyAction="http://tempuri.org/ILibrarian/modifyUserStudentResponse")]
         System.Threading.Tasks.Task<bool> modifyUserStudentAsync(string UserName, string passWord, int CardID, string nom, string prenom, string specialty, string Niveau);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/modifyUserTeacher", ReplyAction="http://tempuri.org/IClient/modifyUserTeacherResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/modifyUserTeacher", ReplyAction="http://tempuri.org/ILibrarian/modifyUserTeacherResponse")]
         bool modifyUserTeacher(string UserName, string passWord, int CardID, string nom, string prenom, string grade);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/modifyUserTeacher", ReplyAction="http://tempuri.org/IClient/modifyUserTeacherResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/modifyUserTeacher", ReplyAction="http://tempuri.org/ILibrarian/modifyUserTeacherResponse")]
         System.Threading.Tasks.Task<bool> modifyUserTeacherAsync(string UserName, string passWord, int CardID, string nom, string prenom, string grade);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/signout", ReplyAction="http://tempuri.org/IClient/signoutResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/signout", ReplyAction="http://tempuri.org/ILibrarian/signoutResponse")]
         bool signout();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/signout", ReplyAction="http://tempuri.org/IClient/signoutResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibrarian/signout", ReplyAction="http://tempuri.org/ILibrarian/signoutResponse")]
         System.Threading.Tasks.Task<bool> signoutAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IClientChannel : ClientBorrower.ClientServerLibraryClient.IClient, System.ServiceModel.IClientChannel {
+    public interface ILibrarianChannel : ClientBorrower.LibrarianServerLibraryService.ILibrarian, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ClientClient : System.ServiceModel.ClientBase<ClientBorrower.ClientServerLibraryClient.IClient>, ClientBorrower.ClientServerLibraryClient.IClient {
+    public partial class LibrarianClient : System.ServiceModel.ClientBase<ClientBorrower.LibrarianServerLibraryService.ILibrarian>, ClientBorrower.LibrarianServerLibraryService.ILibrarian {
         
-        public ClientClient() {
+        public LibrarianClient() {
         }
         
-        public ClientClient(string endpointConfigurationName) : 
+        public LibrarianClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public ClientClient(string endpointConfigurationName, string remoteAddress) : 
+        public LibrarianClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ClientClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public LibrarianClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ClientClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public LibrarianClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
@@ -634,51 +634,51 @@ namespace ClientBorrower.ClientServerLibraryClient {
             return base.Channel.reserveWorkAsync(idClient, idWork);
         }
         
-        public System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getAllWorks() {
+        public System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work> getAllWorks() {
             return base.Channel.getAllWorks();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getAllWorksAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work>> getAllWorksAsync() {
             return base.Channel.getAllWorksAsync();
         }
         
-        public ClientBorrower.ClientServerLibraryClient.Work getById(int idWork) {
+        public ClientBorrower.LibrarianServerLibraryService.Work getById(int idWork) {
             return base.Channel.getById(idWork);
         }
         
-        public System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Work> getByIdAsync(int idWork) {
+        public System.Threading.Tasks.Task<ClientBorrower.LibrarianServerLibraryService.Work> getByIdAsync(int idWork) {
             return base.Channel.getByIdAsync(idWork);
         }
         
-        public System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getByTitle(string titre) {
+        public System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work> getByTitle(string titre) {
             return base.Channel.getByTitle(titre);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getByTitleAsync(string titre) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work>> getByTitleAsync(string titre) {
             return base.Channel.getByTitleAsync(titre);
         }
         
-        public System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getByWriter(string writer) {
+        public System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work> getByWriter(string writer) {
             return base.Channel.getByWriter(writer);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getByWriterAsync(string writer) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work>> getByWriterAsync(string writer) {
             return base.Channel.getByWriterAsync(writer);
         }
         
-        public System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getByTags(string mot_cle) {
+        public System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work> getByTags(string mot_cle) {
             return base.Channel.getByTags(mot_cle);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getByTagsAsync(string mot_cle) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work>> getByTagsAsync(string mot_cle) {
             return base.Channel.getByTagsAsync(mot_cle);
         }
         
-        public System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getByTheme(string theme) {
+        public System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work> getByTheme(string theme) {
             return base.Channel.getByTheme(theme);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getByThemeAsync(string theme) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Work>> getByThemeAsync(string theme) {
             return base.Channel.getByThemeAsync(theme);
         }
         
@@ -706,67 +706,67 @@ namespace ClientBorrower.ClientServerLibraryClient {
             return base.Channel.authenticateUserAsync(userName, passWord);
         }
         
-        public System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Account> getAllUsers() {
+        public System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Account> getAllUsers() {
             return base.Channel.getAllUsers();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Account>> getAllUsersAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Account>> getAllUsersAsync() {
             return base.Channel.getAllUsersAsync();
         }
         
-        public ClientBorrower.ClientServerLibraryClient.Account getUser(string username) {
+        public ClientBorrower.LibrarianServerLibraryService.Account getUser(string username) {
             return base.Channel.getUser(username);
         }
         
-        public System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Account> getUserAsync(string username) {
+        public System.Threading.Tasks.Task<ClientBorrower.LibrarianServerLibraryService.Account> getUserAsync(string username) {
             return base.Channel.getUserAsync(username);
         }
         
-        public System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Borrower> getAllBorrowers() {
+        public System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Borrower> getAllBorrowers() {
             return base.Channel.getAllBorrowers();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Borrower>> getAllBorrowersAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Borrower>> getAllBorrowersAsync() {
             return base.Channel.getAllBorrowersAsync();
         }
         
-        public ClientBorrower.ClientServerLibraryClient.Borrower getBorrower(int IdCard) {
+        public ClientBorrower.LibrarianServerLibraryService.Borrower getBorrower(int IdCard) {
             return base.Channel.getBorrower(IdCard);
         }
         
-        public System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Borrower> getBorrowerAsync(int IdCard) {
+        public System.Threading.Tasks.Task<ClientBorrower.LibrarianServerLibraryService.Borrower> getBorrowerAsync(int IdCard) {
             return base.Channel.getBorrowerAsync(IdCard);
         }
         
-        public System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Student> getAllStudents() {
+        public System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Student> getAllStudents() {
             return base.Channel.getAllStudents();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Student>> getAllStudentsAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Student>> getAllStudentsAsync() {
             return base.Channel.getAllStudentsAsync();
         }
         
-        public ClientBorrower.ClientServerLibraryClient.Student getStudent(int IdCard) {
+        public ClientBorrower.LibrarianServerLibraryService.Student getStudent(int IdCard) {
             return base.Channel.getStudent(IdCard);
         }
         
-        public System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Student> getStudentAsync(int IdCard) {
+        public System.Threading.Tasks.Task<ClientBorrower.LibrarianServerLibraryService.Student> getStudentAsync(int IdCard) {
             return base.Channel.getStudentAsync(IdCard);
         }
         
-        public System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Teacher> getAllTeachers() {
+        public System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Teacher> getAllTeachers() {
             return base.Channel.getAllTeachers();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Teacher>> getAllTeachersAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.LibrarianServerLibraryService.Teacher>> getAllTeachersAsync() {
             return base.Channel.getAllTeachersAsync();
         }
         
-        public ClientBorrower.ClientServerLibraryClient.Teacher getTeacher(int IdCard) {
+        public ClientBorrower.LibrarianServerLibraryService.Teacher getTeacher(int IdCard) {
             return base.Channel.getTeacher(IdCard);
         }
         
-        public System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Teacher> getTeacherAsync(int IdCard) {
+        public System.Threading.Tasks.Task<ClientBorrower.LibrarianServerLibraryService.Teacher> getTeacherAsync(int IdCard) {
             return base.Channel.getTeacherAsync(IdCard);
         }
         

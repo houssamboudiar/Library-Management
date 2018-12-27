@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ClientServerLibrary" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsp:Policy wsu:Id="NetTcpBinding_IClient_policy">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LibrarianServerLibrary" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ILibrarian_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
@@ -31,278 +31,278 @@
   </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://localhost:9001/ClientServerLibrary?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://localhost:9001/ClientServerLibrary?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:9001/ClientServerLibrary?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-      <xsd:import schemaLocation="http://localhost:9001/ClientServerLibrary?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" />
+      <xsd:import schemaLocation="http://localhost:9001/LibrarianServerLibrary?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9001/LibrarianServerLibrary?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9001/LibrarianServerLibrary?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:9001/LibrarianServerLibrary?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IClient_AddWork_InputMessage">
+  <wsdl:message name="ILibrarian_AddWork_InputMessage">
     <wsdl:part name="parameters" element="tns:AddWork" />
   </wsdl:message>
-  <wsdl:message name="IClient_AddWork_OutputMessage">
+  <wsdl:message name="ILibrarian_AddWork_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddWorkResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_EditWork_InputMessage">
+  <wsdl:message name="ILibrarian_EditWork_InputMessage">
     <wsdl:part name="parameters" element="tns:EditWork" />
   </wsdl:message>
-  <wsdl:message name="IClient_EditWork_OutputMessage">
+  <wsdl:message name="ILibrarian_EditWork_OutputMessage">
     <wsdl:part name="parameters" element="tns:EditWorkResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_DeleteWork_InputMessage">
+  <wsdl:message name="ILibrarian_DeleteWork_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteWork" />
   </wsdl:message>
-  <wsdl:message name="IClient_DeleteWork_OutputMessage">
+  <wsdl:message name="ILibrarian_DeleteWork_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteWorkResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_ConfirmWork_InputMessage">
+  <wsdl:message name="ILibrarian_ConfirmWork_InputMessage">
     <wsdl:part name="parameters" element="tns:ConfirmWork" />
   </wsdl:message>
-  <wsdl:message name="IClient_ConfirmWork_OutputMessage">
+  <wsdl:message name="ILibrarian_ConfirmWork_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConfirmWorkResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_returnWork_InputMessage">
+  <wsdl:message name="ILibrarian_returnWork_InputMessage">
     <wsdl:part name="parameters" element="tns:returnWork" />
   </wsdl:message>
-  <wsdl:message name="IClient_returnWork_OutputMessage">
+  <wsdl:message name="ILibrarian_returnWork_OutputMessage">
     <wsdl:part name="parameters" element="tns:returnWorkResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_reserveWork_InputMessage">
+  <wsdl:message name="ILibrarian_reserveWork_InputMessage">
     <wsdl:part name="parameters" element="tns:reserveWork" />
   </wsdl:message>
-  <wsdl:message name="IClient_reserveWork_OutputMessage">
+  <wsdl:message name="ILibrarian_reserveWork_OutputMessage">
     <wsdl:part name="parameters" element="tns:reserveWorkResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getAllWorks_InputMessage">
+  <wsdl:message name="ILibrarian_getAllWorks_InputMessage">
     <wsdl:part name="parameters" element="tns:getAllWorks" />
   </wsdl:message>
-  <wsdl:message name="IClient_getAllWorks_OutputMessage">
+  <wsdl:message name="ILibrarian_getAllWorks_OutputMessage">
     <wsdl:part name="parameters" element="tns:getAllWorksResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getById_InputMessage">
+  <wsdl:message name="ILibrarian_getById_InputMessage">
     <wsdl:part name="parameters" element="tns:getById" />
   </wsdl:message>
-  <wsdl:message name="IClient_getById_OutputMessage">
+  <wsdl:message name="ILibrarian_getById_OutputMessage">
     <wsdl:part name="parameters" element="tns:getByIdResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getByTitle_InputMessage">
+  <wsdl:message name="ILibrarian_getByTitle_InputMessage">
     <wsdl:part name="parameters" element="tns:getByTitle" />
   </wsdl:message>
-  <wsdl:message name="IClient_getByTitle_OutputMessage">
+  <wsdl:message name="ILibrarian_getByTitle_OutputMessage">
     <wsdl:part name="parameters" element="tns:getByTitleResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getByWriter_InputMessage">
+  <wsdl:message name="ILibrarian_getByWriter_InputMessage">
     <wsdl:part name="parameters" element="tns:getByWriter" />
   </wsdl:message>
-  <wsdl:message name="IClient_getByWriter_OutputMessage">
+  <wsdl:message name="ILibrarian_getByWriter_OutputMessage">
     <wsdl:part name="parameters" element="tns:getByWriterResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getByTags_InputMessage">
+  <wsdl:message name="ILibrarian_getByTags_InputMessage">
     <wsdl:part name="parameters" element="tns:getByTags" />
   </wsdl:message>
-  <wsdl:message name="IClient_getByTags_OutputMessage">
+  <wsdl:message name="ILibrarian_getByTags_OutputMessage">
     <wsdl:part name="parameters" element="tns:getByTagsResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getByTheme_InputMessage">
+  <wsdl:message name="ILibrarian_getByTheme_InputMessage">
     <wsdl:part name="parameters" element="tns:getByTheme" />
   </wsdl:message>
-  <wsdl:message name="IClient_getByTheme_OutputMessage">
+  <wsdl:message name="ILibrarian_getByTheme_OutputMessage">
     <wsdl:part name="parameters" element="tns:getByThemeResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_addUserStudent_InputMessage">
+  <wsdl:message name="ILibrarian_addUserStudent_InputMessage">
     <wsdl:part name="parameters" element="tns:addUserStudent" />
   </wsdl:message>
-  <wsdl:message name="IClient_addUserStudent_OutputMessage">
+  <wsdl:message name="ILibrarian_addUserStudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:addUserStudentResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_addUserTeacher_InputMessage">
+  <wsdl:message name="ILibrarian_addUserTeacher_InputMessage">
     <wsdl:part name="parameters" element="tns:addUserTeacher" />
   </wsdl:message>
-  <wsdl:message name="IClient_addUserTeacher_OutputMessage">
+  <wsdl:message name="ILibrarian_addUserTeacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:addUserTeacherResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_authenticateUser_InputMessage">
+  <wsdl:message name="ILibrarian_authenticateUser_InputMessage">
     <wsdl:part name="parameters" element="tns:authenticateUser" />
   </wsdl:message>
-  <wsdl:message name="IClient_authenticateUser_OutputMessage">
+  <wsdl:message name="ILibrarian_authenticateUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:authenticateUserResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getAllUsers_InputMessage">
+  <wsdl:message name="ILibrarian_getAllUsers_InputMessage">
     <wsdl:part name="parameters" element="tns:getAllUsers" />
   </wsdl:message>
-  <wsdl:message name="IClient_getAllUsers_OutputMessage">
+  <wsdl:message name="ILibrarian_getAllUsers_OutputMessage">
     <wsdl:part name="parameters" element="tns:getAllUsersResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getUser_InputMessage">
+  <wsdl:message name="ILibrarian_getUser_InputMessage">
     <wsdl:part name="parameters" element="tns:getUser" />
   </wsdl:message>
-  <wsdl:message name="IClient_getUser_OutputMessage">
+  <wsdl:message name="ILibrarian_getUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:getUserResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getAllBorrowers_InputMessage">
+  <wsdl:message name="ILibrarian_getAllBorrowers_InputMessage">
     <wsdl:part name="parameters" element="tns:getAllBorrowers" />
   </wsdl:message>
-  <wsdl:message name="IClient_getAllBorrowers_OutputMessage">
+  <wsdl:message name="ILibrarian_getAllBorrowers_OutputMessage">
     <wsdl:part name="parameters" element="tns:getAllBorrowersResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getBorrower_InputMessage">
+  <wsdl:message name="ILibrarian_getBorrower_InputMessage">
     <wsdl:part name="parameters" element="tns:getBorrower" />
   </wsdl:message>
-  <wsdl:message name="IClient_getBorrower_OutputMessage">
+  <wsdl:message name="ILibrarian_getBorrower_OutputMessage">
     <wsdl:part name="parameters" element="tns:getBorrowerResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getAllStudents_InputMessage">
+  <wsdl:message name="ILibrarian_getAllStudents_InputMessage">
     <wsdl:part name="parameters" element="tns:getAllStudents" />
   </wsdl:message>
-  <wsdl:message name="IClient_getAllStudents_OutputMessage">
+  <wsdl:message name="ILibrarian_getAllStudents_OutputMessage">
     <wsdl:part name="parameters" element="tns:getAllStudentsResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getStudent_InputMessage">
+  <wsdl:message name="ILibrarian_getStudent_InputMessage">
     <wsdl:part name="parameters" element="tns:getStudent" />
   </wsdl:message>
-  <wsdl:message name="IClient_getStudent_OutputMessage">
+  <wsdl:message name="ILibrarian_getStudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:getStudentResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getAllTeachers_InputMessage">
+  <wsdl:message name="ILibrarian_getAllTeachers_InputMessage">
     <wsdl:part name="parameters" element="tns:getAllTeachers" />
   </wsdl:message>
-  <wsdl:message name="IClient_getAllTeachers_OutputMessage">
+  <wsdl:message name="ILibrarian_getAllTeachers_OutputMessage">
     <wsdl:part name="parameters" element="tns:getAllTeachersResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_getTeacher_InputMessage">
+  <wsdl:message name="ILibrarian_getTeacher_InputMessage">
     <wsdl:part name="parameters" element="tns:getTeacher" />
   </wsdl:message>
-  <wsdl:message name="IClient_getTeacher_OutputMessage">
+  <wsdl:message name="ILibrarian_getTeacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:getTeacherResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_modifyUserStudent_InputMessage">
+  <wsdl:message name="ILibrarian_modifyUserStudent_InputMessage">
     <wsdl:part name="parameters" element="tns:modifyUserStudent" />
   </wsdl:message>
-  <wsdl:message name="IClient_modifyUserStudent_OutputMessage">
+  <wsdl:message name="ILibrarian_modifyUserStudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:modifyUserStudentResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_modifyUserTeacher_InputMessage">
+  <wsdl:message name="ILibrarian_modifyUserTeacher_InputMessage">
     <wsdl:part name="parameters" element="tns:modifyUserTeacher" />
   </wsdl:message>
-  <wsdl:message name="IClient_modifyUserTeacher_OutputMessage">
+  <wsdl:message name="ILibrarian_modifyUserTeacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:modifyUserTeacherResponse" />
   </wsdl:message>
-  <wsdl:message name="IClient_signout_InputMessage">
+  <wsdl:message name="ILibrarian_signout_InputMessage">
     <wsdl:part name="parameters" element="tns:signout" />
   </wsdl:message>
-  <wsdl:message name="IClient_signout_OutputMessage">
+  <wsdl:message name="ILibrarian_signout_OutputMessage">
     <wsdl:part name="parameters" element="tns:signoutResponse" />
   </wsdl:message>
-  <wsdl:portType name="IClient">
+  <wsdl:portType name="ILibrarian">
     <wsdl:operation name="AddWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/AddWork" message="tns:IClient_AddWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/AddWorkResponse" message="tns:IClient_AddWork_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/AddWork" message="tns:ILibrarian_AddWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/AddWorkResponse" message="tns:ILibrarian_AddWork_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="EditWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/EditWork" message="tns:IClient_EditWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/EditWorkResponse" message="tns:IClient_EditWork_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/EditWork" message="tns:ILibrarian_EditWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/EditWorkResponse" message="tns:ILibrarian_EditWork_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/DeleteWork" message="tns:IClient_DeleteWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/DeleteWorkResponse" message="tns:IClient_DeleteWork_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/DeleteWork" message="tns:ILibrarian_DeleteWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/DeleteWorkResponse" message="tns:ILibrarian_DeleteWork_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ConfirmWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/ConfirmWork" message="tns:IClient_ConfirmWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/ConfirmWorkResponse" message="tns:IClient_ConfirmWork_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/ConfirmWork" message="tns:ILibrarian_ConfirmWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/ConfirmWorkResponse" message="tns:ILibrarian_ConfirmWork_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="returnWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/returnWork" message="tns:IClient_returnWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/returnWorkResponse" message="tns:IClient_returnWork_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/returnWork" message="tns:ILibrarian_returnWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/returnWorkResponse" message="tns:ILibrarian_returnWork_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="reserveWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/reserveWork" message="tns:IClient_reserveWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/reserveWorkResponse" message="tns:IClient_reserveWork_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/reserveWork" message="tns:ILibrarian_reserveWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/reserveWorkResponse" message="tns:ILibrarian_reserveWork_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getAllWorks">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getAllWorks" message="tns:IClient_getAllWorks_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getAllWorksResponse" message="tns:IClient_getAllWorks_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getAllWorks" message="tns:ILibrarian_getAllWorks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getAllWorksResponse" message="tns:ILibrarian_getAllWorks_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getById">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getById" message="tns:IClient_getById_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getByIdResponse" message="tns:IClient_getById_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getById" message="tns:ILibrarian_getById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getByIdResponse" message="tns:ILibrarian_getById_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getByTitle">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getByTitle" message="tns:IClient_getByTitle_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getByTitleResponse" message="tns:IClient_getByTitle_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getByTitle" message="tns:ILibrarian_getByTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getByTitleResponse" message="tns:ILibrarian_getByTitle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getByWriter">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getByWriter" message="tns:IClient_getByWriter_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getByWriterResponse" message="tns:IClient_getByWriter_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getByWriter" message="tns:ILibrarian_getByWriter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getByWriterResponse" message="tns:ILibrarian_getByWriter_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getByTags">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getByTags" message="tns:IClient_getByTags_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getByTagsResponse" message="tns:IClient_getByTags_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getByTags" message="tns:ILibrarian_getByTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getByTagsResponse" message="tns:ILibrarian_getByTags_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getByTheme">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getByTheme" message="tns:IClient_getByTheme_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getByThemeResponse" message="tns:IClient_getByTheme_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getByTheme" message="tns:ILibrarian_getByTheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getByThemeResponse" message="tns:ILibrarian_getByTheme_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="addUserStudent">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/addUserStudent" message="tns:IClient_addUserStudent_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/addUserStudentResponse" message="tns:IClient_addUserStudent_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/addUserStudent" message="tns:ILibrarian_addUserStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/addUserStudentResponse" message="tns:ILibrarian_addUserStudent_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="addUserTeacher">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/addUserTeacher" message="tns:IClient_addUserTeacher_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/addUserTeacherResponse" message="tns:IClient_addUserTeacher_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/addUserTeacher" message="tns:ILibrarian_addUserTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/addUserTeacherResponse" message="tns:ILibrarian_addUserTeacher_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="authenticateUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/authenticateUser" message="tns:IClient_authenticateUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/authenticateUserResponse" message="tns:IClient_authenticateUser_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/authenticateUser" message="tns:ILibrarian_authenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/authenticateUserResponse" message="tns:ILibrarian_authenticateUser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getAllUsers">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getAllUsers" message="tns:IClient_getAllUsers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getAllUsersResponse" message="tns:IClient_getAllUsers_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getAllUsers" message="tns:ILibrarian_getAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getAllUsersResponse" message="tns:ILibrarian_getAllUsers_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getUser" message="tns:IClient_getUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getUserResponse" message="tns:IClient_getUser_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getUser" message="tns:ILibrarian_getUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getUserResponse" message="tns:ILibrarian_getUser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getAllBorrowers">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getAllBorrowers" message="tns:IClient_getAllBorrowers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getAllBorrowersResponse" message="tns:IClient_getAllBorrowers_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getAllBorrowers" message="tns:ILibrarian_getAllBorrowers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getAllBorrowersResponse" message="tns:ILibrarian_getAllBorrowers_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getBorrower">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getBorrower" message="tns:IClient_getBorrower_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getBorrowerResponse" message="tns:IClient_getBorrower_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getBorrower" message="tns:ILibrarian_getBorrower_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getBorrowerResponse" message="tns:ILibrarian_getBorrower_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getAllStudents">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getAllStudents" message="tns:IClient_getAllStudents_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getAllStudentsResponse" message="tns:IClient_getAllStudents_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getAllStudents" message="tns:ILibrarian_getAllStudents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getAllStudentsResponse" message="tns:ILibrarian_getAllStudents_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getStudent">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getStudent" message="tns:IClient_getStudent_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getStudentResponse" message="tns:IClient_getStudent_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getStudent" message="tns:ILibrarian_getStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getStudentResponse" message="tns:ILibrarian_getStudent_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getAllTeachers">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getAllTeachers" message="tns:IClient_getAllTeachers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getAllTeachersResponse" message="tns:IClient_getAllTeachers_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getAllTeachers" message="tns:ILibrarian_getAllTeachers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getAllTeachersResponse" message="tns:ILibrarian_getAllTeachers_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getTeacher">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getTeacher" message="tns:IClient_getTeacher_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getTeacherResponse" message="tns:IClient_getTeacher_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/getTeacher" message="tns:ILibrarian_getTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/getTeacherResponse" message="tns:ILibrarian_getTeacher_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="modifyUserStudent">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/modifyUserStudent" message="tns:IClient_modifyUserStudent_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/modifyUserStudentResponse" message="tns:IClient_modifyUserStudent_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/modifyUserStudent" message="tns:ILibrarian_modifyUserStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/modifyUserStudentResponse" message="tns:ILibrarian_modifyUserStudent_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="modifyUserTeacher">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/modifyUserTeacher" message="tns:IClient_modifyUserTeacher_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/modifyUserTeacherResponse" message="tns:IClient_modifyUserTeacher_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/modifyUserTeacher" message="tns:ILibrarian_modifyUserTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/modifyUserTeacherResponse" message="tns:ILibrarian_modifyUserTeacher_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="signout">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClient/signout" message="tns:IClient_signout_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClient/signoutResponse" message="tns:IClient_signout_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibrarian/signout" message="tns:ILibrarian_signout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibrarian/signoutResponse" message="tns:ILibrarian_signout_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="BasicHttpBinding_IClient" type="tns:IClient">
+  <wsdl:binding name="BasicHttpBinding_ILibrarian" type="tns:ILibrarian">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="AddWork">
-      <soap:operation soapAction="http://tempuri.org/IClient/AddWork" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/AddWork" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -311,7 +311,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="EditWork">
-      <soap:operation soapAction="http://tempuri.org/IClient/EditWork" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/EditWork" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -320,7 +320,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DeleteWork">
-      <soap:operation soapAction="http://tempuri.org/IClient/DeleteWork" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/DeleteWork" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -329,7 +329,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConfirmWork">
-      <soap:operation soapAction="http://tempuri.org/IClient/ConfirmWork" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/ConfirmWork" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -338,7 +338,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="returnWork">
-      <soap:operation soapAction="http://tempuri.org/IClient/returnWork" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/returnWork" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -347,7 +347,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="reserveWork">
-      <soap:operation soapAction="http://tempuri.org/IClient/reserveWork" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/reserveWork" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -356,7 +356,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAllWorks">
-      <soap:operation soapAction="http://tempuri.org/IClient/getAllWorks" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getAllWorks" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -365,7 +365,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getById">
-      <soap:operation soapAction="http://tempuri.org/IClient/getById" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getById" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -374,7 +374,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getByTitle">
-      <soap:operation soapAction="http://tempuri.org/IClient/getByTitle" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getByTitle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -383,7 +383,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getByWriter">
-      <soap:operation soapAction="http://tempuri.org/IClient/getByWriter" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getByWriter" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -392,7 +392,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getByTags">
-      <soap:operation soapAction="http://tempuri.org/IClient/getByTags" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getByTags" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -401,7 +401,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getByTheme">
-      <soap:operation soapAction="http://tempuri.org/IClient/getByTheme" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getByTheme" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -410,7 +410,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="addUserStudent">
-      <soap:operation soapAction="http://tempuri.org/IClient/addUserStudent" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/addUserStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -419,7 +419,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="addUserTeacher">
-      <soap:operation soapAction="http://tempuri.org/IClient/addUserTeacher" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/addUserTeacher" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -428,7 +428,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="authenticateUser">
-      <soap:operation soapAction="http://tempuri.org/IClient/authenticateUser" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/authenticateUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -437,7 +437,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAllUsers">
-      <soap:operation soapAction="http://tempuri.org/IClient/getAllUsers" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getAllUsers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -446,7 +446,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getUser">
-      <soap:operation soapAction="http://tempuri.org/IClient/getUser" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -455,7 +455,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAllBorrowers">
-      <soap:operation soapAction="http://tempuri.org/IClient/getAllBorrowers" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getAllBorrowers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -464,7 +464,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getBorrower">
-      <soap:operation soapAction="http://tempuri.org/IClient/getBorrower" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getBorrower" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -473,7 +473,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAllStudents">
-      <soap:operation soapAction="http://tempuri.org/IClient/getAllStudents" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getAllStudents" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -482,7 +482,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getStudent">
-      <soap:operation soapAction="http://tempuri.org/IClient/getStudent" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -491,7 +491,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAllTeachers">
-      <soap:operation soapAction="http://tempuri.org/IClient/getAllTeachers" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getAllTeachers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -500,7 +500,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getTeacher">
-      <soap:operation soapAction="http://tempuri.org/IClient/getTeacher" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/getTeacher" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -509,7 +509,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="modifyUserStudent">
-      <soap:operation soapAction="http://tempuri.org/IClient/modifyUserStudent" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/modifyUserStudent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -518,7 +518,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="modifyUserTeacher">
-      <soap:operation soapAction="http://tempuri.org/IClient/modifyUserTeacher" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/modifyUserTeacher" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -527,7 +527,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="signout">
-      <soap:operation soapAction="http://tempuri.org/IClient/signout" style="document" />
+      <soap:operation soapAction="http://tempuri.org/ILibrarian/signout" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -536,11 +536,11 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:binding name="NetTcpBinding_IClient" type="tns:IClient">
-    <wsp:PolicyReference URI="#NetTcpBinding_IClient_policy" />
+  <wsdl:binding name="NetTcpBinding_ILibrarian" type="tns:ILibrarian">
+    <wsp:PolicyReference URI="#NetTcpBinding_ILibrarian_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
     <wsdl:operation name="AddWork">
-      <soap12:operation soapAction="http://tempuri.org/IClient/AddWork" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/AddWork" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -549,7 +549,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="EditWork">
-      <soap12:operation soapAction="http://tempuri.org/IClient/EditWork" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/EditWork" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -558,7 +558,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DeleteWork">
-      <soap12:operation soapAction="http://tempuri.org/IClient/DeleteWork" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/DeleteWork" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -567,7 +567,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConfirmWork">
-      <soap12:operation soapAction="http://tempuri.org/IClient/ConfirmWork" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/ConfirmWork" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -576,7 +576,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="returnWork">
-      <soap12:operation soapAction="http://tempuri.org/IClient/returnWork" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/returnWork" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -585,7 +585,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="reserveWork">
-      <soap12:operation soapAction="http://tempuri.org/IClient/reserveWork" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/reserveWork" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -594,7 +594,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAllWorks">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getAllWorks" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getAllWorks" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -603,7 +603,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getById">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getById" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getById" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -612,7 +612,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getByTitle">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getByTitle" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getByTitle" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -621,7 +621,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getByWriter">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getByWriter" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getByWriter" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -630,7 +630,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getByTags">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getByTags" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getByTags" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -639,7 +639,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getByTheme">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getByTheme" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getByTheme" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -648,7 +648,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="addUserStudent">
-      <soap12:operation soapAction="http://tempuri.org/IClient/addUserStudent" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/addUserStudent" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -657,7 +657,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="addUserTeacher">
-      <soap12:operation soapAction="http://tempuri.org/IClient/addUserTeacher" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/addUserTeacher" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -666,7 +666,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="authenticateUser">
-      <soap12:operation soapAction="http://tempuri.org/IClient/authenticateUser" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/authenticateUser" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -675,7 +675,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAllUsers">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getAllUsers" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getAllUsers" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -684,7 +684,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getUser">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getUser" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getUser" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -693,7 +693,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAllBorrowers">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getAllBorrowers" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getAllBorrowers" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -702,7 +702,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getBorrower">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getBorrower" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getBorrower" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -711,7 +711,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAllStudents">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getAllStudents" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getAllStudents" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -720,7 +720,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getStudent">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getStudent" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getStudent" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -729,7 +729,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAllTeachers">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getAllTeachers" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getAllTeachers" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -738,7 +738,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getTeacher">
-      <soap12:operation soapAction="http://tempuri.org/IClient/getTeacher" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/getTeacher" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -747,7 +747,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="modifyUserStudent">
-      <soap12:operation soapAction="http://tempuri.org/IClient/modifyUserStudent" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/modifyUserStudent" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -756,7 +756,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="modifyUserTeacher">
-      <soap12:operation soapAction="http://tempuri.org/IClient/modifyUserTeacher" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/modifyUserTeacher" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -765,7 +765,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="signout">
-      <soap12:operation soapAction="http://tempuri.org/IClient/signout" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ILibrarian/signout" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -774,14 +774,14 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="ClientServerLibrary">
-    <wsdl:port name="BasicHttpBinding_IClient" binding="tns:BasicHttpBinding_IClient">
-      <soap:address location="http://localhost:9001/ClientServerLibrary" />
+  <wsdl:service name="LibrarianServerLibrary">
+    <wsdl:port name="BasicHttpBinding_ILibrarian" binding="tns:BasicHttpBinding_ILibrarian">
+      <soap:address location="http://localhost:9001/LibrarianServerLibrary" />
     </wsdl:port>
-    <wsdl:port name="NetTcpBinding_IClient" binding="tns:NetTcpBinding_IClient">
-      <soap12:address location="net.tcp://localhost:9002/ClientServerLibrary" />
+    <wsdl:port name="NetTcpBinding_ILibrarian" binding="tns:NetTcpBinding_ILibrarian">
+      <soap12:address location="net.tcp://localhost:9002/LibrarianServerLibrary" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://localhost:9002/ClientServerLibrary</wsa10:Address>
+        <wsa10:Address>net.tcp://localhost:9002/LibrarianServerLibrary</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>DESKTOP-THB1QHJ\houss</Upn>
         </Identity>

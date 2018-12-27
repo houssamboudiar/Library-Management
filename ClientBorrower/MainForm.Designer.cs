@@ -39,13 +39,13 @@
             this.appName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.username = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.username = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.consultWorks1 = new ClientBorrower.ConsultWorks();
-            this.profileStudent1 = new ClientBorrower.ProfileStudent();
-            this.profileTeacher1 = new ClientBorrower.ProfileTeacher();
             this.loginControl1 = new ClientBorrower.LoginControl();
+            this.profileTeacher1 = new ClientBorrower.ProfileTeacher();
+            this.profileStudent1 = new ClientBorrower.ProfileStudent();
+            this.consultWorks1 = new ClientBorrower.ConsultWorks();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -194,12 +194,34 @@
             this.panel3.Size = new System.Drawing.Size(787, 61);
             this.panel3.TabIndex = 2;
             // 
+            // username
+            // 
+            this.username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.username.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.username.Enabled = false;
+            this.username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.ForeColor = System.Drawing.SystemColors.Menu;
+            this.username.HintForeColor = System.Drawing.SystemColors.Menu;
+            this.username.HintText = "";
+            this.username.isPassword = false;
+            this.username.LineFocusedColor = System.Drawing.Color.Lavender;
+            this.username.LineIdleColor = System.Drawing.Color.Gainsboro;
+            this.username.LineMouseHoverColor = System.Drawing.Color.Lavender;
+            this.username.LineThickness = 3;
+            this.username.Location = new System.Drawing.Point(131, 12);
+            this.username.Margin = new System.Windows.Forms.Padding(4);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(143, 34);
+            this.username.TabIndex = 9;
+            this.username.Text = "Learner";
+            this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(19, 16);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(19, 24);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(105, 22);
             this.bunifuCustomLabel3.TabIndex = 8;
@@ -219,42 +241,13 @@
             this.panel2.Size = new System.Drawing.Size(787, 455);
             this.panel2.TabIndex = 3;
             // 
-            // username
+            // loginControl1
             // 
-            this.username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.username.Enabled = false;
-            this.username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.ForeColor = System.Drawing.SystemColors.Menu;
-            this.username.HintForeColor = System.Drawing.SystemColors.Menu;
-            this.username.HintText = "";
-            this.username.isPassword = false;
-            this.username.LineFocusedColor = System.Drawing.Color.Lavender;
-            this.username.LineIdleColor = System.Drawing.Color.Gainsboro;
-            this.username.LineMouseHoverColor = System.Drawing.Color.Lavender;
-            this.username.LineThickness = 3;
-            this.username.Location = new System.Drawing.Point(131, 4);
-            this.username.Margin = new System.Windows.Forms.Padding(4);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(143, 49);
-            this.username.TabIndex = 9;
-            this.username.Text = "Learner";
-            this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // consultWorks1
-            // 
-            this.consultWorks1.Location = new System.Drawing.Point(0, 0);
-            this.consultWorks1.Name = "consultWorks1";
-            this.consultWorks1.Size = new System.Drawing.Size(787, 469);
-            this.consultWorks1.TabIndex = 0;
-            // 
-            // profileStudent1
-            // 
-            this.profileStudent1.BackColor = System.Drawing.SystemColors.Menu;
-            this.profileStudent1.Location = new System.Drawing.Point(0, 0);
-            this.profileStudent1.Name = "profileStudent1";
-            this.profileStudent1.Size = new System.Drawing.Size(787, 449);
-            this.profileStudent1.TabIndex = 1;
+            this.loginControl1.Location = new System.Drawing.Point(0, 0);
+            this.loginControl1.Name = "loginControl1";
+            this.loginControl1.Size = new System.Drawing.Size(787, 455);
+            this.loginControl1.TabIndex = 3;
+            this.loginControl1.LoggedIn += new System.EventHandler(this.loggedIn);
             // 
             // profileTeacher1
             // 
@@ -264,13 +257,20 @@
             this.profileTeacher1.Size = new System.Drawing.Size(787, 455);
             this.profileTeacher1.TabIndex = 2;
             // 
-            // loginControl1
+            // profileStudent1
             // 
-            this.loginControl1.Location = new System.Drawing.Point(0, 0);
-            this.loginControl1.Name = "loginControl1";
-            this.loginControl1.Size = new System.Drawing.Size(787, 471);
-            this.loginControl1.TabIndex = 3;
-            this.loginControl1.LoggedIn += new System.EventHandler(this.loggedIn);
+            this.profileStudent1.BackColor = System.Drawing.SystemColors.Menu;
+            this.profileStudent1.Location = new System.Drawing.Point(0, 0);
+            this.profileStudent1.Name = "profileStudent1";
+            this.profileStudent1.Size = new System.Drawing.Size(787, 449);
+            this.profileStudent1.TabIndex = 1;
+            // 
+            // consultWorks1
+            // 
+            this.consultWorks1.Location = new System.Drawing.Point(0, 0);
+            this.consultWorks1.Name = "consultWorks1";
+            this.consultWorks1.Size = new System.Drawing.Size(787, 469);
+            this.consultWorks1.TabIndex = 0;
             // 
             // MainForm
             // 
