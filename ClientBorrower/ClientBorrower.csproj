@@ -79,11 +79,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProfileStudent.cs">
+    <Compile Include="ProfileStudentt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ProfileStudent.Designer.cs">
-      <DependentUpon>ProfileStudent.cs</DependentUpon>
+    <Compile Include="ProfileStudentt.Designer.cs">
+      <DependentUpon>ProfileStudentt.cs</DependentUpon>
     </Compile>
     <Compile Include="ProfileTeacher.cs">
       <SubType>UserControl</SubType>
@@ -102,8 +102,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProfileStudent.resx">
-      <DependentUpon>ProfileStudent.cs</DependentUpon>
+    <EmbeddedResource Include="ProfileStudentt.resx">
+      <DependentUpon>ProfileStudentt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfileTeacher.resx">
       <DependentUpon>ProfileTeacher.cs</DependentUpon>

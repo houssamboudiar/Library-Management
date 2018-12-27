@@ -17,9 +17,11 @@ namespace IRemoteWCF.Models
             this.Level = level;
             this.Borrower = borrower;
         }
-
+        [DataMember]
         public string Specialty { get => specialty; set => specialty = value; }
+        [DataMember]
         public string Level { get => level; set => level = value; }
+        [DataMember]
         public Borrower Borrower { get => borrower; set => borrower = value; }
     }
 }

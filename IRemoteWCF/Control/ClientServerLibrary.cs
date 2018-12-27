@@ -262,13 +262,29 @@ namespace IRemoteWCF
             return borrowersList;
         }
 
-        public Borrower getBorrower(int IdCard)
+        public Borrower getBorrower(int id)
         {
             List<Borrower> borrowersList = getAllBorrowers();
 
             foreach (var dr in borrowersList)
             {
-                if (dr.CardID1.Equals(IdCard))
+                if (dr.CardID1.Equals(id))
+                {
+                    Borrower ac = new Borrower(dr.CardID1, dr.FirstName, dr.LastName, dr.Account);
+                    return ac;
+                }
+            }
+            Console.WriteLine("Borrower not found");
+            return null;
+        }
+
+        public Borrower getBorrowerByUser(string user)
+        {
+            List<Borrower> borrowersList = getAllBorrowers();
+
+            foreach (var dr in borrowersList)
+            {
+                if (dr.Account.UserName.Equals(user))
                 {
                     Borrower ac = new Borrower(dr.CardID1, dr.FirstName, dr.LastName, dr.Account);
                     return ac;
@@ -315,6 +331,22 @@ namespace IRemoteWCF
             return null;
         }
 
+        public Student getStudentbyUser(string user)
+        {
+            List<Student> studentsList = getAllStudents();
+
+            foreach (var dr in studentsList)
+            {
+                if (dr.Borrower.Account.UserName.Equals(user))
+                {
+                    Student ac = new Student(dr.Borrower, dr.Specialty, dr.Level);
+                    return ac;
+                }
+            }
+            Console.WriteLine("Student not found");
+            return null;
+        }
+
         public List<Teacher> getAllTeachers()
         {
             DataTable teachers = manageUsers.getAllTeachers();
@@ -346,7 +378,23 @@ namespace IRemoteWCF
                     return ac;
                 }
             }
-            Console.WriteLine("Student not found");
+            Console.WriteLine("Teacher not found");
+            return null;
+        }
+
+        public Teacher getTeacherByUser(string user)
+        {
+            List<Teacher> teachersList = getAllTeachers();
+
+            foreach (var dr in teachersList)
+            {
+                if (dr.Borrower.Account.UserName.Equals(user))
+                {
+                    Teacher ac = new Teacher(dr.Grade, dr.Borrower);
+                    return ac;
+                }
+            }
+            Console.WriteLine("Teacher not found");
             return null;
         }
 

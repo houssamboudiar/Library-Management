@@ -74,7 +74,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(787, 449);
+            this.panel1.Size = new System.Drawing.Size(787, 471);
             this.panel1.TabIndex = 0;
             // 
             // button2
@@ -118,7 +118,7 @@
             listViewGroup1});
             this.listView1.Location = new System.Drawing.Point(0, 149);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(787, 297);
+            this.listView1.Size = new System.Drawing.Size(787, 322);
             this.listView1.TabIndex = 77;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -301,7 +301,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "ConsultWorks";
-            this.Size = new System.Drawing.Size(787, 449);
+            this.Size = new System.Drawing.Size(787, 471);
             this.Load += new System.EventHandler(this.ConsultWorks_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

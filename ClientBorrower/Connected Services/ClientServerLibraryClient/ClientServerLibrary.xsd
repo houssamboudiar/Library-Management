@@ -312,6 +312,34 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getTeacherByUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTeacherByUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getTeacherByUserResult" nillable="true" type="q17:Teacher" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStudentbyUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStudentbyUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getStudentbyUserResult" nillable="true" type="q18:Student" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="getAllTeachers">
     <xs:complexType>
       <xs:sequence />
@@ -320,7 +348,7 @@
   <xs:element name="getAllTeachersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getAllTeachersResult" nillable="true" type="q17:ArrayOfTeacher" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getAllTeachersResult" nillable="true" type="q19:ArrayOfTeacher" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -334,7 +362,7 @@
   <xs:element name="getTeacherResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getTeacherResult" nillable="true" type="q18:Teacher" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getTeacherResult" nillable="true" type="q20:Teacher" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

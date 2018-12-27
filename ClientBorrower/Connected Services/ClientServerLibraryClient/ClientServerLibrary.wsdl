@@ -163,6 +163,18 @@
   <wsdl:message name="IClient_getStudent_OutputMessage">
     <wsdl:part name="parameters" element="tns:getStudentResponse" />
   </wsdl:message>
+  <wsdl:message name="IClient_getTeacherByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTeacherByUser" />
+  </wsdl:message>
+  <wsdl:message name="IClient_getTeacherByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTeacherByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClient_getStudentbyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStudentbyUser" />
+  </wsdl:message>
+  <wsdl:message name="IClient_getStudentbyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStudentbyUserResponse" />
+  </wsdl:message>
   <wsdl:message name="IClient_getAllTeachers_InputMessage">
     <wsdl:part name="parameters" element="tns:getAllTeachers" />
   </wsdl:message>
@@ -277,6 +289,14 @@
     <wsdl:operation name="getStudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IClient/getStudent" message="tns:IClient_getStudent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClient/getStudentResponse" message="tns:IClient_getStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTeacherByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getTeacherByUser" message="tns:IClient_getTeacherByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getTeacherByUserResponse" message="tns:IClient_getTeacherByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStudentbyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClient/getStudentbyUser" message="tns:IClient_getStudentbyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClient/getStudentbyUserResponse" message="tns:IClient_getStudentbyUser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getAllTeachers">
       <wsdl:input wsaw:Action="http://tempuri.org/IClient/getAllTeachers" message="tns:IClient_getAllTeachers_InputMessage" />
@@ -483,6 +503,24 @@
     </wsdl:operation>
     <wsdl:operation name="getStudent">
       <soap:operation soapAction="http://tempuri.org/IClient/getStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTeacherByUser">
+      <soap:operation soapAction="http://tempuri.org/IClient/getTeacherByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStudentbyUser">
+      <soap:operation soapAction="http://tempuri.org/IClient/getStudentbyUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -721,6 +759,24 @@
     </wsdl:operation>
     <wsdl:operation name="getStudent">
       <soap12:operation soapAction="http://tempuri.org/IClient/getStudent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTeacherByUser">
+      <soap12:operation soapAction="http://tempuri.org/IClient/getTeacherByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStudentbyUser">
+      <soap12:operation soapAction="http://tempuri.org/IClient/getStudentbyUser" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

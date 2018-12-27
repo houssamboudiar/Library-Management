@@ -22,8 +22,6 @@ namespace ClientBorrower
             button3.Enabled = false;
             profileButton.Enabled = false;
             button1.Enabled = false;
-
-
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -50,17 +48,23 @@ namespace ClientBorrower
         private void button4_Click(object sender, EventArgs e)
         {
             SidePanel.Height = profileButton.Height;
-
             SidePanel.Top = profileButton.Top;
-            String usertype = "Student";
-            if(usertype == "Student")
+            ClientClient clientService = new ClientClient("NetTcpBinding_IClient");
+            if (user.Type == "Etudiant")
             {
-                profileStudent1.BringToFront();
+                
+                Student student = clientService.getStudentbyUser(user.UserName);
+                profileStudentt1.Student = student;
+                profileStudentt1.BringToFront();
             }
             else
             {
-                profileTeacher1.BringToFront();
+                //Teacher teacher = clientService.getTeacherByUser(user.UserName);
+                //ProfileTeacher prflt = new ProfileTeacher(teacher);
+                //prflt.BringToFront();
+                username.Text = (string)sender + " : ";
             }
+
         }
 
         private void profile1_Load(object sender, EventArgs e)
@@ -91,19 +95,27 @@ namespace ClientBorrower
 
         }
 
+
+        public static Account user;
         private void loggedIn(object sender, EventArgs e)
         {
-            username.Text = (string)sender;
             SidePanel.Height = profileButton.Height;
             SidePanel.Top = profileButton.Top;
-            String usertype = "Student";
-            if (usertype == "Student")
+            ClientClient clientService = new ClientClient("NetTcpBinding_IClient");
+            user = clientService.getUser((string)sender);
+            if ( user.Type == "Etudiant")
             {
-                profileStudent1.BringToFront();
+                Student student = clientService.getStudentbyUser(user.UserName);
+                profileStudentt1.fillProfileEventHandler(student);
+                profileStudentt1.BringToFront();
+                username.Text = (string)sender + " : " + student.Borrower.CardID1;
             }
             else
             {
-                profileTeacher1.BringToFront();
+                //profileTeacher1.BringToFront();
+                //Teacher teacher = clientService.getTeacherByUser((string)sender);
+                //username.Text = (string)sender + " : " + teacher.Borrower.CardID1;
+                //this.fillprofile?.Invoke(user, e);
             }
             loginButton.Enabled = false;
             button3.Enabled = true;

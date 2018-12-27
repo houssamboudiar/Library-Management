@@ -317,6 +317,15 @@ namespace ClientBorrower.ClientServerLibraryClient {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ClientBorrower.ClientServerLibraryClient.Borrower BorrowerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LevelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SpecialtyField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -324,6 +333,45 @@ namespace ClientBorrower.ClientServerLibraryClient {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ClientBorrower.ClientServerLibraryClient.Borrower Borrower {
+            get {
+                return this.BorrowerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BorrowerField, value) != true)) {
+                    this.BorrowerField = value;
+                    this.RaisePropertyChanged("Borrower");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Level {
+            get {
+                return this.LevelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LevelField, value) != true)) {
+                    this.LevelField = value;
+                    this.RaisePropertyChanged("Level");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Specialty {
+            get {
+                return this.SpecialtyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SpecialtyField, value) != true)) {
+                    this.SpecialtyField = value;
+                    this.RaisePropertyChanged("Specialty");
+                }
             }
         }
         
@@ -527,6 +575,18 @@ namespace ClientBorrower.ClientServerLibraryClient {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getStudent", ReplyAction="http://tempuri.org/IClient/getStudentResponse")]
         System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Student> getStudentAsync(int IdCard);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getTeacherByUser", ReplyAction="http://tempuri.org/IClient/getTeacherByUserResponse")]
+        ClientBorrower.ClientServerLibraryClient.Teacher getTeacherByUser(string user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getTeacherByUser", ReplyAction="http://tempuri.org/IClient/getTeacherByUserResponse")]
+        System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Teacher> getTeacherByUserAsync(string user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getStudentbyUser", ReplyAction="http://tempuri.org/IClient/getStudentbyUserResponse")]
+        ClientBorrower.ClientServerLibraryClient.Student getStudentbyUser(string user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getStudentbyUser", ReplyAction="http://tempuri.org/IClient/getStudentbyUserResponse")]
+        System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Student> getStudentbyUserAsync(string user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllTeachers", ReplyAction="http://tempuri.org/IClient/getAllTeachersResponse")]
         System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Teacher> getAllTeachers();
@@ -752,6 +812,22 @@ namespace ClientBorrower.ClientServerLibraryClient {
         
         public System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Student> getStudentAsync(int IdCard) {
             return base.Channel.getStudentAsync(IdCard);
+        }
+        
+        public ClientBorrower.ClientServerLibraryClient.Teacher getTeacherByUser(string user) {
+            return base.Channel.getTeacherByUser(user);
+        }
+        
+        public System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Teacher> getTeacherByUserAsync(string user) {
+            return base.Channel.getTeacherByUserAsync(user);
+        }
+        
+        public ClientBorrower.ClientServerLibraryClient.Student getStudentbyUser(string user) {
+            return base.Channel.getStudentbyUser(user);
+        }
+        
+        public System.Threading.Tasks.Task<ClientBorrower.ClientServerLibraryClient.Student> getStudentbyUserAsync(string user) {
+            return base.Channel.getStudentbyUserAsync(user);
         }
         
         public System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Teacher> getAllTeachers() {

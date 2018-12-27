@@ -54,15 +54,13 @@
   </xs:complexType>
   <xs:element name="ArrayOfStudent" nillable="true" type="tns:ArrayOfStudent" />
   <xs:complexType name="Student">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:element name="Student" nillable="true" type="tns:Student" />
-  <xs:complexType name="ArrayOfTeacher">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Teacher" nillable="true" type="tns:Teacher" />
+      <xs:element minOccurs="0" name="Borrower" nillable="true" type="tns:Borrower" />
+      <xs:element minOccurs="0" name="Level" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Specialty" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfTeacher" nillable="true" type="tns:ArrayOfTeacher" />
+  <xs:element name="Student" nillable="true" type="tns:Student" />
   <xs:complexType name="Teacher">
     <xs:sequence>
       <xs:element minOccurs="0" name="Borrower" nillable="true" type="tns:Borrower" />
@@ -70,4 +68,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Teacher" nillable="true" type="tns:Teacher" />
+  <xs:complexType name="ArrayOfTeacher">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Teacher" nillable="true" type="tns:Teacher" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTeacher" nillable="true" type="tns:ArrayOfTeacher" />
 </xs:schema>

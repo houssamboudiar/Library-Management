@@ -42,10 +42,10 @@
             this.username = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.consultWorks1 = new ClientBorrower.ConsultWorks();
             this.loginControl1 = new ClientBorrower.LoginControl();
             this.profileTeacher1 = new ClientBorrower.ProfileTeacher();
-            this.profileStudent1 = new ClientBorrower.ProfileStudent();
-            this.consultWorks1 = new ClientBorrower.ConsultWorks();
+            this.profileStudentt1 = new ClientBorrower.ProfileStudentt();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -211,7 +211,7 @@
             this.username.Location = new System.Drawing.Point(131, 12);
             this.username.Margin = new System.Windows.Forms.Padding(4);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(143, 34);
+            this.username.Size = new System.Drawing.Size(286, 34);
             this.username.TabIndex = 9;
             this.username.Text = "Learner";
             this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -231,15 +231,22 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.profileStudentt1);
+            this.panel2.Controls.Add(this.consultWorks1);
             this.panel2.Controls.Add(this.loginControl1);
             this.panel2.Controls.Add(this.profileTeacher1);
-            this.panel2.Controls.Add(this.profileStudent1);
-            this.panel2.Controls.Add(this.consultWorks1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(169, 61);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(787, 455);
             this.panel2.TabIndex = 3;
+            // 
+            // consultWorks1
+            // 
+            this.consultWorks1.Location = new System.Drawing.Point(0, 0);
+            this.consultWorks1.Name = "consultWorks1";
+            this.consultWorks1.Size = new System.Drawing.Size(787, 455);
+            this.consultWorks1.TabIndex = 0;
             // 
             // loginControl1
             // 
@@ -257,20 +264,12 @@
             this.profileTeacher1.Size = new System.Drawing.Size(787, 455);
             this.profileTeacher1.TabIndex = 2;
             // 
-            // profileStudent1
+            // profileStudentt1
             // 
-            this.profileStudent1.BackColor = System.Drawing.SystemColors.Menu;
-            this.profileStudent1.Location = new System.Drawing.Point(0, 0);
-            this.profileStudent1.Name = "profileStudent1";
-            this.profileStudent1.Size = new System.Drawing.Size(787, 449);
-            this.profileStudent1.TabIndex = 1;
-            // 
-            // consultWorks1
-            // 
-            this.consultWorks1.Location = new System.Drawing.Point(0, 0);
-            this.consultWorks1.Name = "consultWorks1";
-            this.consultWorks1.Size = new System.Drawing.Size(787, 469);
-            this.consultWorks1.TabIndex = 0;
+            this.profileStudentt1.Location = new System.Drawing.Point(0, 0);
+            this.profileStudentt1.Name = "profileStudentt1";
+            this.profileStudentt1.Size = new System.Drawing.Size(787, 471);
+            this.profileStudentt1.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -313,10 +312,10 @@
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuMaterialTextbox username;
+        private ConsultWorks consultWorks1;
         private LoginControl loginControl1;
         private ProfileTeacher profileTeacher1;
-        private ProfileStudent profileStudent1;
-        private ConsultWorks consultWorks1;
+        private ProfileStudentt profileStudentt1;
     }
 }
 

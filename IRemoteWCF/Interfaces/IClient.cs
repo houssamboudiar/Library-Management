@@ -82,6 +82,12 @@ namespace IRemoteWCF
         Student getStudent(int IdCard);
 
         [OperationContract]
+        Teacher getTeacherByUser(string user);
+
+        [OperationContract]
+        Student getStudentbyUser(string user);
+
+        [OperationContract]
         List<Teacher> getAllTeachers();
 
         [OperationContract]

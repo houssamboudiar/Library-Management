@@ -48,13 +48,13 @@
             this.signpassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.signpasswordc = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bunifuCheckbox2 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuCheckbox2 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lastName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.loginPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +74,7 @@
             this.loginPanel.ForeColor = System.Drawing.Color.White;
             this.loginPanel.Location = new System.Drawing.Point(0, 0);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(301, 471);
+            this.loginPanel.Size = new System.Drawing.Size(302, 471);
             this.loginPanel.TabIndex = 0;
             this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.loginPanel_Paint);
             // 
@@ -108,19 +108,19 @@
             // loginpasswordText
             // 
             this.loginpasswordText.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.loginpasswordText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginpasswordText.ForeColor = System.Drawing.Color.White;
-            this.loginpasswordText.HintForeColor = System.Drawing.Color.White;
+            this.loginpasswordText.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginpasswordText.ForeColor = System.Drawing.SystemColors.Control;
+            this.loginpasswordText.HintForeColor = System.Drawing.SystemColors.Control;
             this.loginpasswordText.HintText = "";
             this.loginpasswordText.isPassword = true;
             this.loginpasswordText.LineFocusedColor = System.Drawing.Color.Lavender;
             this.loginpasswordText.LineIdleColor = System.Drawing.Color.Gainsboro;
             this.loginpasswordText.LineMouseHoverColor = System.Drawing.Color.Lavender;
             this.loginpasswordText.LineThickness = 4;
-            this.loginpasswordText.Location = new System.Drawing.Point(20, 192);
+            this.loginpasswordText.Location = new System.Drawing.Point(20, 204);
             this.loginpasswordText.Margin = new System.Windows.Forms.Padding(4);
             this.loginpasswordText.Name = "loginpasswordText";
-            this.loginpasswordText.Size = new System.Drawing.Size(246, 44);
+            this.loginpasswordText.Size = new System.Drawing.Size(246, 32);
             this.loginpasswordText.TabIndex = 9;
             this.loginpasswordText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -162,19 +162,19 @@
             // loginuserNametext
             // 
             this.loginuserNametext.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.loginuserNametext.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginuserNametext.ForeColor = System.Drawing.Color.White;
-            this.loginuserNametext.HintForeColor = System.Drawing.Color.White;
+            this.loginuserNametext.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginuserNametext.ForeColor = System.Drawing.SystemColors.Control;
+            this.loginuserNametext.HintForeColor = System.Drawing.SystemColors.Control;
             this.loginuserNametext.HintText = "";
             this.loginuserNametext.isPassword = false;
             this.loginuserNametext.LineFocusedColor = System.Drawing.Color.Lavender;
             this.loginuserNametext.LineIdleColor = System.Drawing.Color.Gainsboro;
             this.loginuserNametext.LineMouseHoverColor = System.Drawing.Color.Lavender;
             this.loginuserNametext.LineThickness = 3;
-            this.loginuserNametext.Location = new System.Drawing.Point(20, 90);
+            this.loginuserNametext.Location = new System.Drawing.Point(20, 103);
             this.loginuserNametext.Margin = new System.Windows.Forms.Padding(4);
             this.loginuserNametext.Name = "loginuserNametext";
-            this.loginuserNametext.Size = new System.Drawing.Size(246, 45);
+            this.loginuserNametext.Size = new System.Drawing.Size(246, 32);
             this.loginuserNametext.TabIndex = 3;
             this.loginuserNametext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.loginuserNametext.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
@@ -282,7 +282,7 @@
             this.idcardtextbox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idcardtextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
             this.idcardtextbox.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
-            this.idcardtextbox.HintText = "";
+            this.idcardtextbox.HintText = "Must be a number";
             this.idcardtextbox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.idcardtextbox.isPassword = false;
             this.idcardtextbox.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
@@ -303,7 +303,7 @@
             this.firstname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
             this.firstname.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
-            this.firstname.HintText = "Name";
+            this.firstname.HintText = "First Name";
             this.firstname.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.firstname.isPassword = false;
             this.firstname.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
@@ -315,7 +315,6 @@
             this.firstname.Name = "firstname";
             this.firstname.Size = new System.Drawing.Size(180, 37);
             this.firstname.TabIndex = 14;
-            this.firstname.Text = "First Name";
             this.firstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.firstname.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged_1);
             // 
@@ -325,7 +324,7 @@
             this.signpassword.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
             this.signpassword.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
-            this.signpassword.HintText = "Password";
+            this.signpassword.HintText = "";
             this.signpassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.signpassword.isPassword = true;
             this.signpassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
@@ -346,7 +345,7 @@
             this.signpasswordc.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signpasswordc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
             this.signpasswordc.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
-            this.signpasswordc.HintText = "Confirmation";
+            this.signpasswordc.HintText = "";
             this.signpasswordc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.signpasswordc.isPassword = true;
             this.signpasswordc.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
@@ -391,29 +390,29 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // bunifuCustomLabel7
+            // label3
             // 
-            this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(49, 339);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(91, 21);
-            this.bunifuCustomLabel7.TabIndex = 15;
-            this.bunifuCustomLabel7.Text = "User Type :";
-            this.bunifuCustomLabel7.Click += new System.EventHandler(this.bunifuCustomLabel7_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label3.Location = new System.Drawing.Point(314, 343);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 17);
+            this.label3.TabIndex = 76;
+            this.label3.Text = "Teacher";
             // 
-            // bunifuCustomLabel9
+            // bunifuCheckbox2
             // 
-            this.bunifuCustomLabel9.AutoSize = true;
-            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(251, 264);
-            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(94, 17);
-            this.bunifuCustomLabel9.TabIndex = 13;
-            this.bunifuCustomLabel9.Text = "Confirmation";
-            this.bunifuCustomLabel9.Click += new System.EventHandler(this.bunifuCustomLabel5_Click);
+            this.bunifuCheckbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.bunifuCheckbox2.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.bunifuCheckbox2.Checked = false;
+            this.bunifuCheckbox2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox2.ForeColor = System.Drawing.Color.White;
+            this.bunifuCheckbox2.Location = new System.Drawing.Point(175, 341);
+            this.bunifuCheckbox2.Name = "bunifuCheckbox2";
+            this.bunifuCheckbox2.Size = new System.Drawing.Size(20, 20);
+            this.bunifuCheckbox2.TabIndex = 75;
+            this.bunifuCheckbox2.OnChange += new System.EventHandler(this.bunifuCheckbox2_OnChange);
             // 
             // label1
             // 
@@ -439,29 +438,17 @@
             this.bunifuCheckbox1.TabIndex = 75;
             this.bunifuCheckbox1.OnChange += new System.EventHandler(this.bunifuCheckbox1_OnChange);
             // 
-            // bunifuCheckbox2
+            // bunifuCustomLabel7
             // 
-            this.bunifuCheckbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox2.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox2.Checked = false;
-            this.bunifuCheckbox2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox2.Location = new System.Drawing.Point(175, 341);
-            this.bunifuCheckbox2.Name = "bunifuCheckbox2";
-            this.bunifuCheckbox2.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox2.TabIndex = 75;
-            this.bunifuCheckbox2.OnChange += new System.EventHandler(this.bunifuCheckbox2_OnChange);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label3.Location = new System.Drawing.Point(314, 343);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 17);
-            this.label3.TabIndex = 76;
-            this.label3.Text = "Teacher";
+            this.bunifuCustomLabel7.AutoSize = true;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(49, 339);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(91, 21);
+            this.bunifuCustomLabel7.TabIndex = 15;
+            this.bunifuCustomLabel7.Text = "User Type :";
+            this.bunifuCustomLabel7.Click += new System.EventHandler(this.bunifuCustomLabel7_Click);
             // 
             // lastName
             // 
@@ -483,6 +470,18 @@
             this.lastName.TabIndex = 14;
             this.lastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.lastName.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged_1);
+            // 
+            // bunifuCustomLabel9
+            // 
+            this.bunifuCustomLabel9.AutoSize = true;
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(251, 264);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(94, 17);
+            this.bunifuCustomLabel9.TabIndex = 13;
+            this.bunifuCustomLabel9.Text = "Confirmation";
+            this.bunifuCustomLabel9.Click += new System.EventHandler(this.bunifuCustomLabel5_Click);
             // 
             // LoginControl
             // 

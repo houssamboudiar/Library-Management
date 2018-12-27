@@ -86,14 +86,27 @@ namespace ClientBorrower
 
             if(clientService.authenticateUser(username, password))
             {
-                MessageBox.Show("Logged in"+ username +"!");
+                MessageBox.Show("Logged in "+ username +" !");
+
                 this.LoggedIn?.Invoke(username, e);
+                loginuserNametext.Text = "";
+                loginpasswordText.Text = "";
+                usernametextbox.Text = "";
+                idcardtextbox.Text = "";
+                firstname.Text = "";
+                signpassword.Text = "";
+                signpasswordc.Text = "";
+                lastName.Text = "";
+                bunifuCheckbox2.Checked = false;
+                bunifuCheckbox1.Checked = false;
             }
             else
             {
                 MessageBox.Show("Please provide valide User Name and Password");
             }
         }
+
+
 
         private void bunifuCustomLabel5_Click(object sender, EventArgs e)
         {
@@ -132,38 +145,111 @@ namespace ClientBorrower
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*
             ClientClient clientService = new ClientClient("NetTcpBinding_IClient");
-
-
+            string specialChar = @"\|!#$%&/*()=?»«@£§€{}.-;'<>_,";
 
             string username = usernametextbox.Text;
-            string id = idcardtextbox.Text;
+
+            if (username.Length <= 7)
+            {
+                MessageBox.Show("The Username length should be greater than or equal to 8");
+                return;
+            }
+
+            foreach (var item in specialChar)
+            {
+                if (username.Contains(item))
+                {
+                    MessageBox.Show("Username Contains special char");
+                    return;
+                }
+            }
+
+            int id;
+            if (!int.TryParse(idcardtextbox.Text, out id))
+            {
+                MessageBox.Show("ID should be a Number");
+                return;
+            }
+
             string fname = firstname.Text;
             string lname = lastName.Text;
+
+            foreach (var item in specialChar)
+            {
+                if (fname.Contains(item))
+                {
+                    MessageBox.Show("First name Contains special char");
+                    return;
+                }
+            }
+
+            foreach (var item in specialChar)
+            {
+                if (lname.Contains(item))
+                {
+                    MessageBox.Show("Last Name Contains special char");
+                    return;
+                }
+            }
+
             string password = signpassword.Text;
+            if (password.Length <= 7)
+            {
+                MessageBox.Show("The password length should be greater than or equal to 8");
+                return;
+
+            }
+
+            foreach (var item in specialChar)
+            {
+                if (password.Contains(item))
+                {
+                    MessageBox.Show("Password Contains special char");
+                    return;
+                }
+            }
+
             string passwordc = signpasswordc.Text;
 
-            if (password.Equals(passwordc))
+            if (!password.Equals(passwordc))
             {
-                bool form = true;
+                MessageBox.Show("Password does not match the confirmation");
+                return;
+            }
+            
+            if (bunifuCheckbox2.Checked==false)
+            {
+                if(bunifuCheckbox1.Checked==false)
+                {
+                    MessageBox.Show("You must select a user type !");
+                    return;
+                }
+                else
+                {
+                    if(clientService.addUserTeacher(username,password,id,fname,lname,"Not Assigned"))
+                    {
+                        MessageBox.Show("Great you just registered ! you can Sign-in " + fname);
+                    }
+                }
             }
             else
             {
-                bool form = true;
+                if(clientService.addUserStudent(username, password, id, fname, lname, "NotAssigned" , "NotAssigned"))
+                {
+                    MessageBox.Show("Great you just registered ! you can Sign-in " + fname);
+                }
             }
-
-            string type = "Etudiant";
-            if (bunifuCheckbox1.Checked && !bunifuCheckbox2.Checked)
-            {
-                type = "Etudiant";
-            }
-            else
-            {
-                type = "Enseignant";
-            }
-
-            //clientService.addUserStudent();*/
+            loginuserNametext.Text = "";
+            loginpasswordText.Text = "";
+            usernametextbox.Text = "";
+            idcardtextbox.Text = "";
+            firstname.Text = "";
+            signpassword.Text = "";
+            signpasswordc.Text = "";
+            lastName.Text = "";
+            bunifuCheckbox2.Checked = false;
+            bunifuCheckbox1.Checked = false;
         }
 
         private void bunifuCustomLabel7_Click(object sender, EventArgs e)

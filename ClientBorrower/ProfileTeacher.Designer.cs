@@ -372,7 +372,7 @@
             this.Controls.Add(this.bunifuCustomLabel11);
             this.Controls.Add(this.bunifuCustomLabel12);
             this.Name = "ProfileTeacher";
-            this.Size = new System.Drawing.Size(787, 449);
+            this.Size = new System.Drawing.Size(787, 471);
             this.ResumeLayout(false);
             this.PerformLayout();
 
