@@ -25,6 +25,7 @@ namespace ClientBorrower
 
         public void fillProfileEventHandler(Student student)
         {
+            Student = student;
             lname.Text = student.Borrower.LastName;
             Specialty.Text = student.Specialty;
             cardid.Text = student.Borrower.CardID1.ToString();
@@ -36,7 +37,7 @@ namespace ClientBorrower
         {
             lname.Enabled = !lname.Enabled;
             Specialty.Enabled = !Specialty.Enabled;
-            cardid.Enabled = !cardid.Enabled;
+            //cardid.Enabled = !cardid.Enabled;
             fname.Enabled = !fname.Enabled;
             level.Enabled = !level.Enabled;
             bunifuMaterialTextbox8.Enabled = !bunifuMaterialTextbox8.Enabled;
@@ -47,6 +48,7 @@ namespace ClientBorrower
         private void button1_Click(object sender, EventArgs e)
         {
             ClientClient clientService = new ClientClient("NetTcpBinding_IClient");
+            //clientService.getStudent
             string username = bunifuMaterialTextbox9.Text;
             string password = bunifuMaterialTextbox8.Text;
 
@@ -88,9 +90,78 @@ namespace ClientBorrower
                 MessageBox.Show("Please Provide User Name and Password !");
             }
 
-            if (clientService.authenticateUser(username, password))
+            if (clientService.authenticateUser(username, password) && username == student.Borrower.Account.UserName && password == student.Borrower.Account.PassWord)
             {
                 MessageBox.Show(" Authentificated " + username + " !");
+                string laname =lname.Text;
+                string spec = Specialty.Text;
+                int id;
+                if (!int.TryParse(cardid.Text, out id))
+                {
+                    MessageBox.Show("ID should be a Number");
+                    return;
+                }
+
+                if (clientService.getBorrower(id) != null)
+                {
+                    if (clientService.getBorrower(id).CardID1 == student.Borrower.CardID1)
+                    {
+                        string fn = fname.Text;
+                        string lev = level.Text;
+
+                        foreach (var item in specialChar)
+                        {
+                            if (fn.Contains(item))
+                            {
+                                MessageBox.Show("First name Contains special char");
+                                return;
+                            }
+                        }
+
+                        foreach (var item in specialChar)
+                        {
+                            if (lev.Contains(item))
+                            {
+                                MessageBox.Show("Last Name Contains special char");
+                                return;
+                            }
+                        }
+                        clientService.modifyUserStudent(username, password, id, fn, laname, spec, lev);
+                        MessageBox.Show("Edited successfully");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please make sure to use the right ID or contact the Library manager !");
+                        return;
+                    }
+                }
+                else
+                {
+                    string fn = fname.Text;
+                    string lev = level.Text;
+
+                    foreach (var item in specialChar)
+                    {
+                        if (fn.Contains(item))
+                        {
+                            MessageBox.Show("First name Contains special char");
+                            return;
+                        }
+                    }
+
+                    foreach (var item in specialChar)
+                    {
+                        if (lev.Contains(item))
+                        {
+                            MessageBox.Show("Last Name Contains special char");
+                            return;
+                        }
+                    }
+                    clientService.modifyUserStudent(username, password, id, fn, laname, spec, lev);
+                    MessageBox.Show("Edited successfully");
+                    return;
+                }
             }
             else
             {

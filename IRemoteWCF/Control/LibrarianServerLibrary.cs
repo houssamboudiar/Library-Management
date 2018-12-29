@@ -17,6 +17,14 @@ namespace IRemoteWCF
         //Consult Works
         ConsultWorksDataService consultWorksDataService = new ConsultWorksDataService();
 
+        public delegate Boolean delegateSendEmail(int idWork);
+
+        public Boolean sendMessageEmail(int idWork)
+        {
+            ManageWorksDataService manageWorksDataService = new ManageWorksDataService();
+            return manageWorksDataService.sendEmail(idWork);
+        }
+
         public List<Work> getAllWorks()
         {
             DataTable workTable = consultWorksDataService.getAllWorks();
@@ -130,11 +138,14 @@ namespace IRemoteWCF
 
         public bool AddWork(List<string> tags, List<string> writers, string title, string theme, string type)
         {
-            if (type != "Thèses" || type != "Livre" || type != "Mémoires")
+
+            if (type.Equals("Thèses") == false && type.Equals("Livre") == false && type.Equals("Mémoires") == false)
             {
+
                 Console.WriteLine("Sorry cannot insert such type " + type);
                 return false;
             }
+
             Work work = new Work(tags, writers, title, theme, type, 0);
             return manageWorksDataService.addWorkDataService(work);
         }
@@ -151,7 +162,7 @@ namespace IRemoteWCF
 
         public bool EditWork(int idWork, List<string> tags, List<string> writers, string title, string theme, string type)
         {
-            if (type != "Thèses" || type != "Livre" || type != "Mémoires")
+            if (type != "Thèses" && type != "Livre" && type != "Mémoires")
             {
                 Console.WriteLine("Sorry cannot insert such type " + type);
                 return false;
@@ -169,7 +180,18 @@ namespace IRemoteWCF
 
         public bool returnWork(int idWork, int idBorrower)
         {
-            return manageWorksDataService.rendreOuvrage(idWork, idBorrower);
+            LibrarianServerLibrary librarianServerLibrary = new LibrarianServerLibrary();
+            delegateSendEmail delegateSendEmail = new delegateSendEmail(librarianServerLibrary.sendMessageEmail);
+            Boolean b = manageWorksDataService.rendreOuvrage(idWork, idBorrower);
+            if (b)
+            {
+                delegateSendEmail.Invoke(idWork);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         //ManageUsers

@@ -48,13 +48,13 @@ namespace ClientBorrower
 
             if (username.Length <= 7)
             {
-                MessageBox.Show("The username length should be greater than or equal to 8");
+                MessageBox.Show("The username length should be greater than or equal to 8", "Warning");
                 return;
             }
 
             if (password.Length <= 7)
             {
-                MessageBox.Show("The password length should be greater than or equal to 8");
+                MessageBox.Show("The password length should be greater than or equal to 8", "Warning");
                 return;
 
             }
@@ -64,7 +64,7 @@ namespace ClientBorrower
             {
                 if (username.Contains(item))
                 {
-                    MessageBox.Show("Contains username special char");
+                    MessageBox.Show("Contains username special char", "Warning");
                     return;
                 }
             }
@@ -73,7 +73,7 @@ namespace ClientBorrower
             {
                 if (password.Contains(item))
                 {
-                    MessageBox.Show("Contains password special char");
+                    MessageBox.Show("Contains password special char", "Warning");
                     return;
                 }
             }
@@ -81,12 +81,12 @@ namespace ClientBorrower
 
             if (string.IsNullOrEmpty(username) | string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Please Provide User Name and Password !");
+                MessageBox.Show("Please Provide User Name and Password !" , "Warning");
             }
 
             if(clientService.authenticateUser(username, password))
             {
-                MessageBox.Show("Logged in "+ username +" !");
+                MessageBox.Show("Welcome "+ username +" !", "Sign-in");
 
                 this.LoggedIn?.Invoke(username, e);
                 loginuserNametext.Text = "";
@@ -102,7 +102,7 @@ namespace ClientBorrower
             }
             else
             {
-                MessageBox.Show("Please provide valide User Name and Password");
+                MessageBox.Show("Please provide valide User Name and Password", "Warning");
             }
         }
 
@@ -152,7 +152,7 @@ namespace ClientBorrower
 
             if (username.Length <= 7)
             {
-                MessageBox.Show("The Username length should be greater than or equal to 8");
+                MessageBox.Show("The Username length should be greater than or equal to 8", "Warning");
                 return;
             }
 
@@ -160,18 +160,29 @@ namespace ClientBorrower
             {
                 if (username.Contains(item))
                 {
-                    MessageBox.Show("Username Contains special char");
+                    MessageBox.Show("Username Contains special char", "Warning");
                     return;
                 }
+            }
+
+            if (clientService.getUser(username)!=null)
+            {
+                MessageBox.Show("Username already exists !", "Warning");
+                return;
             }
 
             int id;
             if (!int.TryParse(idcardtextbox.Text, out id))
             {
-                MessageBox.Show("ID should be a Number");
+                MessageBox.Show("ID should be a Number", "Warning");
                 return;
             }
 
+            if (clientService.getBorrower(id)!=null)
+            {
+                MessageBox.Show("Please make sure to use the right ID or contact the Library manager !", "Warning");
+                return;
+            }
             string fname = firstname.Text;
             string lname = lastName.Text;
 
@@ -179,7 +190,7 @@ namespace ClientBorrower
             {
                 if (fname.Contains(item))
                 {
-                    MessageBox.Show("First name Contains special char");
+                    MessageBox.Show("First name Contains special char", "Warning");
                     return;
                 }
             }
@@ -188,7 +199,7 @@ namespace ClientBorrower
             {
                 if (lname.Contains(item))
                 {
-                    MessageBox.Show("Last Name Contains special char");
+                    MessageBox.Show("Last Name Contains special char", "Warning");
                     return;
                 }
             }
@@ -196,7 +207,7 @@ namespace ClientBorrower
             string password = signpassword.Text;
             if (password.Length <= 7)
             {
-                MessageBox.Show("The password length should be greater than or equal to 8");
+                MessageBox.Show("The password length should be greater than or equal to 8", "Warning");
                 return;
 
             }
@@ -205,7 +216,7 @@ namespace ClientBorrower
             {
                 if (password.Contains(item))
                 {
-                    MessageBox.Show("Password Contains special char");
+                    MessageBox.Show("Password Contains special char", "Warning");
                     return;
                 }
             }
@@ -214,7 +225,7 @@ namespace ClientBorrower
 
             if (!password.Equals(passwordc))
             {
-                MessageBox.Show("Password does not match the confirmation");
+                MessageBox.Show("Password does not match the confirmation", "Warning");
                 return;
             }
             
@@ -222,14 +233,14 @@ namespace ClientBorrower
             {
                 if(bunifuCheckbox1.Checked==false)
                 {
-                    MessageBox.Show("You must select a user type !");
+                    MessageBox.Show("You must select a user type !", "Warning");
                     return;
                 }
                 else
                 {
                     if(clientService.addUserTeacher(username,password,id,fname,lname,"Not Assigned"))
                     {
-                        MessageBox.Show("Great you just registered ! you can Sign-in " + fname);
+                        MessageBox.Show("Great you just registered ! you can Sign-in " + fname , "Sign-up");
                     }
                 }
             }
@@ -237,7 +248,7 @@ namespace ClientBorrower
             {
                 if(clientService.addUserStudent(username, password, id, fname, lname, "NotAssigned" , "NotAssigned"))
                 {
-                    MessageBox.Show("Great you just registered ! you can Sign-in " + fname);
+                    MessageBox.Show("Great you just registered ! you can Sign-in " + fname, "Sign-up");
                 }
             }
             loginuserNametext.Text = "";

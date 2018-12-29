@@ -114,8 +114,7 @@ namespace IRemoteWCF.Control.DataServiceBase
         {
 
             string queryemp = String.Format("UPDATE `emprunteur` SET `nom` = '{0}', `prenom` = '{1}' WHERE `emprunteur`.`id_emprunteur` = {2}", teacher.Borrower.LastName, teacher.Borrower.FirstName, teacher.Borrower.CardID1);
-            string queryetu = String.Format("UPDATE `enseignant` SET `grade` = '{0}' WHERE `enseignant`.`mat` = '{1}'", teacher.Grade, teacher.Borrower.CardID1);
-
+            string queryetu = String.Format("UPDATE `enseignant` SET `grade` = '{0}' WHERE `enseignant`.`matricule` = '{1}'", teacher.Grade, teacher.Borrower.CardID1);
             if (crudmysql.UpdateData(queryemp) && crudmysql.UpdateData(queryetu))
             {
                 return true;
@@ -125,5 +124,6 @@ namespace IRemoteWCF.Control.DataServiceBase
                 return false;
             }
         }
+
     }
 }

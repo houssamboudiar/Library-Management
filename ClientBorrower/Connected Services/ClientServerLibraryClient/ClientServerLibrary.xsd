@@ -98,6 +98,48 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="isBorrowed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idWork" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isBorrowedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isBorrowedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isReserved">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idWork" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isReservedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isReservedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isBanned">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isBannedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isBannedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="getAllWorks">
     <xs:complexType>
       <xs:sequence />
@@ -177,6 +219,22 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/IRemoteWCF.Models" minOccurs="0" name="getByThemeResult" nillable="true" type="q10:ArrayOfWork" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CardID" type="xs:int" />
+        <xs:element minOccurs="0" name="idWork" type="xs:int" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addListResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

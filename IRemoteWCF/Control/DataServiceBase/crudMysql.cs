@@ -191,5 +191,49 @@ namespace IRemoteWCF.Control.DataServiceBase
                 return false;
             }
         }
+
+        public string testSend(int idWork)
+        {
+            try
+            {
+                DataTable dataTable = ReadData("select * from liste_attente where code_ouvrage = " + idWork);
+                DateTime dateTime;
+                List<DateTime> dateTimes = new List<DateTime>();
+                foreach (DataRow d in dataTable.Rows)
+                {
+                    dateTimes.Add(Convert.ToDateTime(d["date"].ToString()));
+
+                }
+                dateTime = dateTimes.Min();
+                int idborrower = 0;
+                string email = null;
+                foreach (DataRow d in dataTable.Rows)
+                {
+                    if (Convert.ToDateTime(d["date"].ToString()) == dateTime)
+                    {
+                        idborrower = Convert.ToInt32(d["code_emprunteur"].ToString());
+                        email = d["email"].ToString();
+                    }
+
+                }
+                if (idborrower == 0)
+                {
+                    return null;
+                }
+                dataTable = ReadData("select * from emprunteur where id_emprunteur = " + idborrower);
+                string m = null;
+                foreach (DataRow d in dataTable.Rows)
+                {
+                    m = d["nom"].ToString() + "," + d["prenom"].ToString() + "," + email;
+                    DeleteData("delete from liste_attente where code_emprunteur = " + idborrower + " and code_ouvrage =" + idWork + " and date ='" + dateTime + "'");
+                }
+                return m;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
     }
 }

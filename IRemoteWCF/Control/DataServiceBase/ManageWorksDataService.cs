@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.Mail;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,38 @@ namespace IRemoteWCF.Control.DataServiceBase
     public class ManageWorksDataService
     {
         crudMysql crudmysql = new crudMysql("localhost", "poc", "houssamboudiar", "stormspirit99");
+
+        public Boolean sendEmail(int idWork)
+        {
+            try
+            {
+                string r = crudmysql.testSend(idWork);
+                if (r == null)
+                {
+                    return false;
+                }
+                string[] m = r.Split(',');
+                DataTable dataTable = crudmysql.ReadData("select titre from ouvrage where code = " + idWork);
+                string message = " ";
+                foreach (DataRow d in dataTable.Rows)
+                {
+                    message = "Hello dear " + m[0] + " " + m[1] + " , \n We would like to inform you that the work " + d["titre"].ToString() + " is available for reservation";
+                }
+                MailMessage mailMessage = new MailMessage("projetpoc4@gmail.com", m[2], "Library of NTIC Faculty", message);
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
+                smtpClient.Port = 587;
+                smtpClient.Credentials = new System.Net.NetworkCredential("projetpoc4@gmail.com", "projetpoc1234");
+                smtpClient.EnableSsl = true;
+                smtpClient.Send(mailMessage);
+                Console.WriteLine("message envoyer");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
 
         public void test()
         {
@@ -74,54 +107,116 @@ namespace IRemoteWCF.Control.DataServiceBase
 
         public bool reservation(int idWork, int CardID)
         {
-
-            DataTable emp = crudmysql.ReadData("select code_ouvrage from emprunt where code_ouvrage = " + idWork);
-            foreach (DataRow dr in emp.Rows)
-                {
-                    return false;
-                }
-
-            DataTable dataTable = crudmysql.ReadData("select code_ouvrage,date_reservation from reservation where code_ouvrage = " + idWork);
-            foreach (DataRow d in dataTable.Rows)
-                {
-                    var dnow = (DateTime.Now - Convert.ToDateTime(d["date_reservation"].ToString())).TotalHours;
-
-                    if (dnow < 24)
-                    {
-                        return false;
-                    }
-                }
-
-            DataTable able = crudmysql.ReadData("select id_emprunteur,date_reservation from reservation where id_emprunteur = " + CardID);
-            int i = 0;
-            foreach (DataRow v in able.Rows)
-                {
-
-                    i++;
-                    var dnow = (DateTime.Now - Convert.ToDateTime(v["date_reservation"].ToString())).TotalHours;
-                    Console.WriteLine(dnow);
-                    if (i >= 3 && dnow > 24)
-                    {
-                        return false;
-                    }
-
+            if (isBorrowed(idWork))
+            {
+                Console.WriteLine("This Work is already borrowed !!");
+                return false;
             }
 
-            bool n = crudmysql.bCreateData("insert into reservation values ('" + DateTime.Now + "' , " + CardID + " , " + idWork + ")");
+            if (isReserved(idWork))
+            {
+                Console.WriteLine("This Work is already reserved !!");
+                return false;
+            }
+
+            if (isBanned(CardID))
+            {
+                Console.WriteLine("This Work is already reserved !!");
+                return false;
+            }
+
+            if (isBanned(CardID))
+            {
+                Console.WriteLine("Banned User !! ");
+                return false;
+            }
+            Console.WriteLine(DateTime.Now);
+
+
+
+            bool n = crudmysql.bCreateData("insert into reservation values (CURRENT_TIME() , " + CardID + " , " + idWork + ")");
             if (n)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool isBorrowed(int idWork)
+        {
+            DataTable emp = crudmysql.ReadData("select code_ouvrage from emprunt where code_ouvrage = " + idWork);
+            foreach (DataRow dr in emp.Rows)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool isReserved(int idWork)
+        {
+            DataTable dataTable = crudmysql.ReadData("select code_ouvrage,date_reservation from reservation where code_ouvrage = " + idWork);
+            foreach (DataRow d in dataTable.Rows)
+            {
+                var dnow = (DateTime.Now - Convert.ToDateTime(d["date_reservation"].ToString())).TotalHours;
+
+                if (dnow < 24)
                 {
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
+            }
+            return false;
         }
+
+        
+        public bool isBanned(int CardID)
+        {
+            DataTable able = crudmysql.ReadData("select id_emprunteur,date_reservation from reservation where id_emprunteur = " + CardID);
+            int i = 0;
+            List<DateTime> dateTimes = new List<DateTime>();
+            DateTime dateTime;
+            foreach (DataRow v in able.Rows)
+            {
+                dateTimes.Add(Convert.ToDateTime(v["date_reservation"].ToString()));
+                i++;
+                var dnow = (DateTime.Now - Convert.ToDateTime(v["date_reservation"].ToString())).TotalHours;
+                if (i >= 3 && dnow > 24)
+                {
+                    if (i == 3)
+                    {
+                        dateTime = dateTimes.Max();
+                        Console.WriteLine(dateTime);
+                        if ((DateTime.Now - dateTime).TotalDays > 30)
+                        {
+                            crudmysql.DeleteData("delete from reservation where id_emprunteur = " + CardID);
+                        }
+                        return false;
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
 
         public Boolean rendreOuvrage(int idWork, int idBorrower)
         {
             string DELETEquery = String.Format("DELETE FROM `emprunt` WHERE `emprunt`.`code_emprunteur` = '{0}' AND `emprunt`.`code_ouvrage` = {1}", idBorrower, idWork);
             return crudmysql.DeleteData(DELETEquery);
         }
+
+
+        public bool addQueue(int CardID, int idWork, string email)
+        {
+            string query = String.Format("INSERT INTO `liste_attente` (`code_emprunteur`, `code_ouvrage`, `date`, `email`) VALUES('{0}', '{1}',CURRENT_DATE(), '{2}')", CardID, idWork, email);
+
+
+            return crudmysql.bCreateData(query);
+        }
+
     }
+
 }

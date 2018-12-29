@@ -33,6 +33,15 @@ namespace IRemoteWCF
         [OperationContract]
         Boolean reserveWork(int idClient, int idWork);
 
+        [OperationContract]
+        Boolean isBorrowed(int idWork);
+
+        [OperationContract]
+        Boolean isReserved(int idWork);
+
+        [OperationContract]
+        Boolean isBanned(int idCard);
+
         // Consult Works
         [OperationContract]
         List<Work> getAllWorks();
@@ -52,6 +61,8 @@ namespace IRemoteWCF
         [OperationContract]
         List<Work> getByTheme(String theme);
 
+        [OperationContract]
+        bool addList(int CardID, int idWork, string email);
 
         // Manage Users
         [OperationContract]

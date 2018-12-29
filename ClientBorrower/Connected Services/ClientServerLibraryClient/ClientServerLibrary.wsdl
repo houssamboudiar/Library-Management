@@ -73,6 +73,24 @@
   <wsdl:message name="IClient_reserveWork_OutputMessage">
     <wsdl:part name="parameters" element="tns:reserveWorkResponse" />
   </wsdl:message>
+  <wsdl:message name="IClient_isBorrowed_InputMessage">
+    <wsdl:part name="parameters" element="tns:isBorrowed" />
+  </wsdl:message>
+  <wsdl:message name="IClient_isBorrowed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isBorrowedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClient_isReserved_InputMessage">
+    <wsdl:part name="parameters" element="tns:isReserved" />
+  </wsdl:message>
+  <wsdl:message name="IClient_isReserved_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isReservedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClient_isBanned_InputMessage">
+    <wsdl:part name="parameters" element="tns:isBanned" />
+  </wsdl:message>
+  <wsdl:message name="IClient_isBanned_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isBannedResponse" />
+  </wsdl:message>
   <wsdl:message name="IClient_getAllWorks_InputMessage">
     <wsdl:part name="parameters" element="tns:getAllWorks" />
   </wsdl:message>
@@ -108,6 +126,12 @@
   </wsdl:message>
   <wsdl:message name="IClient_getByTheme_OutputMessage">
     <wsdl:part name="parameters" element="tns:getByThemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClient_addList_InputMessage">
+    <wsdl:part name="parameters" element="tns:addList" />
+  </wsdl:message>
+  <wsdl:message name="IClient_addList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addListResponse" />
   </wsdl:message>
   <wsdl:message name="IClient_addUserStudent_InputMessage">
     <wsdl:part name="parameters" element="tns:addUserStudent" />
@@ -230,6 +254,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IClient/reserveWork" message="tns:IClient_reserveWork_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClient/reserveWorkResponse" message="tns:IClient_reserveWork_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="isBorrowed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClient/isBorrowed" message="tns:IClient_isBorrowed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClient/isBorrowedResponse" message="tns:IClient_isBorrowed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isReserved">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClient/isReserved" message="tns:IClient_isReserved_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClient/isReservedResponse" message="tns:IClient_isReserved_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isBanned">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClient/isBanned" message="tns:IClient_isBanned_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClient/isBannedResponse" message="tns:IClient_isBanned_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="getAllWorks">
       <wsdl:input wsaw:Action="http://tempuri.org/IClient/getAllWorks" message="tns:IClient_getAllWorks_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClient/getAllWorksResponse" message="tns:IClient_getAllWorks_OutputMessage" />
@@ -253,6 +289,10 @@
     <wsdl:operation name="getByTheme">
       <wsdl:input wsaw:Action="http://tempuri.org/IClient/getByTheme" message="tns:IClient_getByTheme_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClient/getByThemeResponse" message="tns:IClient_getByTheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClient/addList" message="tns:IClient_addList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClient/addListResponse" message="tns:IClient_addList_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="addUserStudent">
       <wsdl:input wsaw:Action="http://tempuri.org/IClient/addUserStudent" message="tns:IClient_addUserStudent_InputMessage" />
@@ -375,6 +415,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="isBorrowed">
+      <soap:operation soapAction="http://tempuri.org/IClient/isBorrowed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isReserved">
+      <soap:operation soapAction="http://tempuri.org/IClient/isReserved" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isBanned">
+      <soap:operation soapAction="http://tempuri.org/IClient/isBanned" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getAllWorks">
       <soap:operation soapAction="http://tempuri.org/IClient/getAllWorks" style="document" />
       <wsdl:input>
@@ -422,6 +489,15 @@
     </wsdl:operation>
     <wsdl:operation name="getByTheme">
       <soap:operation soapAction="http://tempuri.org/IClient/getByTheme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addList">
+      <soap:operation soapAction="http://tempuri.org/IClient/addList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -631,6 +707,33 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="isBorrowed">
+      <soap12:operation soapAction="http://tempuri.org/IClient/isBorrowed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isReserved">
+      <soap12:operation soapAction="http://tempuri.org/IClient/isReserved" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isBanned">
+      <soap12:operation soapAction="http://tempuri.org/IClient/isBanned" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getAllWorks">
       <soap12:operation soapAction="http://tempuri.org/IClient/getAllWorks" style="document" />
       <wsdl:input>
@@ -678,6 +781,15 @@
     </wsdl:operation>
     <wsdl:operation name="getByTheme">
       <soap12:operation soapAction="http://tempuri.org/IClient/getByTheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addList">
+      <soap12:operation soapAction="http://tempuri.org/IClient/addList" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

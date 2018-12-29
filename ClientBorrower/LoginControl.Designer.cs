@@ -62,7 +62,6 @@
             // loginPanel
             // 
             this.loginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(217)))), ((int)(((byte)(191)))));
-            this.loginPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.loginPanel.Controls.Add(this.label2);
             this.loginPanel.Controls.Add(this.button1);
             this.loginPanel.Controls.Add(this.loginpasswordText);

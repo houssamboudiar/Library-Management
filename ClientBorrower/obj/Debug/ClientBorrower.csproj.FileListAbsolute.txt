@@ -13,3 +13,4 @@ C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\obj\Debug\ClientBorrower.ConsultWorks.resources
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\bin\Debug\ClientBorrower.exe.config
 C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\obj\Debug\ClientBorrower.ProfileStudentt.resources
+C:\Users\houss\source\repos\Library-Management\Library-Management\ClientBorrower\obj\Debug\ClientBorrower.csprojAssemblyReference.cache

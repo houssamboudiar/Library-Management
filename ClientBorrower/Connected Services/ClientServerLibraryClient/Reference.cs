@@ -486,6 +486,24 @@ namespace ClientBorrower.ClientServerLibraryClient {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/reserveWork", ReplyAction="http://tempuri.org/IClient/reserveWorkResponse")]
         System.Threading.Tasks.Task<bool> reserveWorkAsync(int idClient, int idWork);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/isBorrowed", ReplyAction="http://tempuri.org/IClient/isBorrowedResponse")]
+        bool isBorrowed(int idWork);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/isBorrowed", ReplyAction="http://tempuri.org/IClient/isBorrowedResponse")]
+        System.Threading.Tasks.Task<bool> isBorrowedAsync(int idWork);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/isReserved", ReplyAction="http://tempuri.org/IClient/isReservedResponse")]
+        bool isReserved(int idWork);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/isReserved", ReplyAction="http://tempuri.org/IClient/isReservedResponse")]
+        System.Threading.Tasks.Task<bool> isReservedAsync(int idWork);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/isBanned", ReplyAction="http://tempuri.org/IClient/isBannedResponse")]
+        bool isBanned(int idCard);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/isBanned", ReplyAction="http://tempuri.org/IClient/isBannedResponse")]
+        System.Threading.Tasks.Task<bool> isBannedAsync(int idCard);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getAllWorks", ReplyAction="http://tempuri.org/IClient/getAllWorksResponse")]
         System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getAllWorks();
         
@@ -521,6 +539,12 @@ namespace ClientBorrower.ClientServerLibraryClient {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/getByTheme", ReplyAction="http://tempuri.org/IClient/getByThemeResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getByThemeAsync(string theme);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/addList", ReplyAction="http://tempuri.org/IClient/addListResponse")]
+        bool addList(int CardID, int idWork, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/addList", ReplyAction="http://tempuri.org/IClient/addListResponse")]
+        System.Threading.Tasks.Task<bool> addListAsync(int CardID, int idWork, string email);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClient/addUserStudent", ReplyAction="http://tempuri.org/IClient/addUserStudentResponse")]
         bool addUserStudent(string UserName, string passWord, int id, string nom, string prenom, string specialty, string niv);
@@ -694,6 +718,30 @@ namespace ClientBorrower.ClientServerLibraryClient {
             return base.Channel.reserveWorkAsync(idClient, idWork);
         }
         
+        public bool isBorrowed(int idWork) {
+            return base.Channel.isBorrowed(idWork);
+        }
+        
+        public System.Threading.Tasks.Task<bool> isBorrowedAsync(int idWork) {
+            return base.Channel.isBorrowedAsync(idWork);
+        }
+        
+        public bool isReserved(int idWork) {
+            return base.Channel.isReserved(idWork);
+        }
+        
+        public System.Threading.Tasks.Task<bool> isReservedAsync(int idWork) {
+            return base.Channel.isReservedAsync(idWork);
+        }
+        
+        public bool isBanned(int idCard) {
+            return base.Channel.isBanned(idCard);
+        }
+        
+        public System.Threading.Tasks.Task<bool> isBannedAsync(int idCard) {
+            return base.Channel.isBannedAsync(idCard);
+        }
+        
         public System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work> getAllWorks() {
             return base.Channel.getAllWorks();
         }
@@ -740,6 +788,14 @@ namespace ClientBorrower.ClientServerLibraryClient {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<ClientBorrower.ClientServerLibraryClient.Work>> getByThemeAsync(string theme) {
             return base.Channel.getByThemeAsync(theme);
+        }
+        
+        public bool addList(int CardID, int idWork, string email) {
+            return base.Channel.addList(CardID, idWork, email);
+        }
+        
+        public System.Threading.Tasks.Task<bool> addListAsync(int CardID, int idWork, string email) {
+            return base.Channel.addListAsync(CardID, idWork, email);
         }
         
         public bool addUserStudent(string UserName, string passWord, int id, string nom, string prenom, string specialty, string niv) {

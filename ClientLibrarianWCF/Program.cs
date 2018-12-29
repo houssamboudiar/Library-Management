@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClientLibrarian;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace ClientLibrarianWCF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new deleteWorkForm());
+            Application.Run(new ProfilLibrarian());
         }
     }
 }

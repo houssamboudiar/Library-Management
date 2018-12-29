@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ed4f4251-4a47-4c17-a488-60227518fbe4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9001/LibrarianServerLibrary" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LibrarianServerLibrary.disco" MetadataType="Disco" ID="496b255e-b686-4cd5-a241-26dd1a3d289c" SourceId="1" SourceUrl="http://localhost:9001/LibrarianServerLibrary?disco" />
+    <MetadataFile FileName="LibrarianServerLibrary.xsd" MetadataType="Schema" ID="c02dde76-a44e-434f-97bb-d531f8881ff0" SourceId="1" SourceUrl="http://localhost:9001/LibrarianServerLibrary?xsd=xsd1" />
+    <MetadataFile FileName="LibrarianServerLibrary1.xsd" MetadataType="Schema" ID="a413b535-4c80-463b-97af-aa8acd26a897" SourceId="1" SourceUrl="http://localhost:9001/LibrarianServerLibrary?xsd=xsd0" />
+    <MetadataFile FileName="LibrarianServerLibrary2.xsd" MetadataType="Schema" ID="7467cb83-39a1-48c4-8f5e-745bc6e6b7c0" SourceId="1" SourceUrl="http://localhost:9001/LibrarianServerLibrary?xsd=xsd3" />
+    <MetadataFile FileName="LibrarianServerLibrary3.xsd" MetadataType="Schema" ID="28e4cd35-a816-4768-982f-156955560d13" SourceId="1" SourceUrl="http://localhost:9001/LibrarianServerLibrary?xsd=xsd2" />
+    <MetadataFile FileName="LibrarianServerLibrary.wsdl" MetadataType="Wsdl" ID="b451e5ad-ba38-4645-a9f3-a04144ca62ab" SourceId="1" SourceUrl="http://localhost:9001/LibrarianServerLibrary?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

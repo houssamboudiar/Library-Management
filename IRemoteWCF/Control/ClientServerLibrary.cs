@@ -30,13 +30,13 @@ namespace IRemoteWCF
                 int idWork;
 
                 idWork = Convert.ToInt32(dr["code"]);
-                title = dr["titre"].ToString();
-                theme = dr["theme"].ToString();
-                type = dr["type"].ToString();
-                String Strtags = dr["mots_cle"].ToString();
-                String Strwriters = dr["auteurs"].ToString();
+                title = dr["titre"].ToString().ToLower();
+                theme = dr["theme"].ToString().ToLower();
+                type = dr["type"].ToString().ToLower();
+                String Strtags = dr["mots_cle"].ToString().ToLower();
+                String Strwriters = dr["auteurs"].ToString().ToLower();
 
-                string[] separatingChars = { ", ", "," };
+                string[] separatingChars = { ", ", "," , " ," };
 
                 tags = Strtags.Split(separatingChars, System.StringSplitOptions.RemoveEmptyEntries).ToList();
                 writers = Strwriters.Split(separatingChars, System.StringSplitOptions.RemoveEmptyEntries).ToList();
@@ -167,9 +167,28 @@ namespace IRemoteWCF
             return manageWorksDataService.reservation(idWork, idClient);
         }
 
+        public bool isBorrowed(int idWork)
+        {
+            return manageWorksDataService.isBorrowed(idWork);
+        }
+
+        public bool isReserved(int idWork)
+        {
+            return manageWorksDataService.isReserved(idWork);
+        }
+
+        public bool isBanned(int CardID)
+        {
+            return manageWorksDataService.isBanned(CardID);
+        }
+
         public bool returnWork(int idWork, int idBorrower)
         {
             return manageWorksDataService.rendreOuvrage(idWork, idBorrower);
+        }
+        public bool addList(int CardID, int idWork, string email)
+        {
+            return manageWorksDataService.addQueue(CardID, idWork , email);
         }
 
         //ManageUsers
@@ -356,7 +375,7 @@ namespace IRemoteWCF
             {
                 String grade;
 
-                int idCard = Convert.ToInt32(dr["num_carte"]);
+                int idCard = Convert.ToInt32(dr["matricule"]);
                 Borrower borrower = getBorrower(idCard);
                 Account account = getUser(borrower.Account.UserName);
                 grade = dr["grade"].ToString();

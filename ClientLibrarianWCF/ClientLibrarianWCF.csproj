@@ -33,8 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
@@ -48,45 +53,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\ConsultWorksService\Reference.cs">
+    <Compile Include="AjouterOuvrage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AjouterOuvrage.Designer.cs">
+      <DependentUpon>AjouterOuvrage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmerReservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfirmerReservation.Designer.cs">
+      <DependentUpon>ConfirmerReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\LibrarianServerLibrary\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\ManageWorksService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <Compile Include="Login.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DeleteWork.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteWork.Designer.cs">
-      <DependentUpon>DeleteWork.cs</DependentUpon>
-    </Compile>
-    <Compile Include="deleteWorkForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="deleteWorkForm.Designer.cs">
-      <DependentUpon>deleteWorkForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditWork.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditWork.Designer.cs">
-      <DependentUpon>EditWork.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GetWork.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GetWork.Designer.cs">
-      <DependentUpon>GetWork.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NewWork.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewWork.Designer.cs">
-      <DependentUpon>NewWork.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="ProfilLibrarian.cs">
       <SubType>Form</SubType>
@@ -96,20 +84,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DeleteWork.resx">
-      <DependentUpon>DeleteWork.cs</DependentUpon>
+    <Compile Include="RecupererOuvrage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RecupererOuvrage.Designer.cs">
+      <DependentUpon>RecupererOuvrage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RendreOuvrage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RendreOuvrage.Designer.cs">
+      <DependentUpon>RendreOuvrage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupprimerOuvrage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SupprimerOuvrage.Designer.cs">
+      <DependentUpon>SupprimerOuvrage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AjouterOuvrage.resx">
+      <DependentUpon>AjouterOuvrage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="deleteWorkForm.resx">
-      <DependentUpon>deleteWorkForm.cs</DependentUpon>
+    <EmbeddedResource Include="ConfirmerReservation.resx">
+      <DependentUpon>ConfirmerReservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditWork.resx">
-      <DependentUpon>EditWork.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GetWork.resx">
-      <DependentUpon>GetWork.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewWork.resx">
-      <DependentUpon>NewWork.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfilLibrarian.resx">
       <DependentUpon>ProfilLibrarian.cs</DependentUpon>
@@ -123,30 +123,33 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RecupererOuvrage.resx">
+      <DependentUpon>RecupererOuvrage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RendreOuvrage.resx">
+      <DependentUpon>RendreOuvrage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupprimerOuvrage.resx">
+      <DependentUpon>SupprimerOuvrage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="Connected Services\ConsultWorksService\Arrays.xsd">
+    <None Include="Connected Services\LibrarianServerLibrary\LibrarianServerLibrary.wsdl" />
+    <None Include="Connected Services\LibrarianServerLibrary\LibrarianServerLibrary.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ConsultWorksService\IRemoteWCF.Models.xsd">
+    <None Include="Connected Services\LibrarianServerLibrary\LibrarianServerLibrary1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ConsultWorksService\service.wsdl" />
-    <None Include="Connected Services\ConsultWorksService\service.xsd">
+    <None Include="Connected Services\LibrarianServerLibrary\LibrarianServerLibrary2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ConsultWorksService\service1.xsd">
+    <None Include="Connected Services\LibrarianServerLibrary\LibrarianServerLibrary3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ManageWorksService\ManageWorks.wsdl" />
-    <None Include="Connected Services\ManageWorksService\ManageWorks.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ManageWorksService\ManageWorks1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ManageWorksService\ManageWorks2.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Properties\DataSources\IRemoteWCF.Models.Account.datasource" />
+    <None Include="Properties\DataSources\IRemoteWCF.Models.Borrower.datasource" />
+    <None Include="Properties\DataSources\IRemoteWCF.Models.Student.datasource" />
+    <None Include="Properties\DataSources\IRemoteWCF.Models.Teacher.datasource" />
     <None Include="Properties\DataSources\IRemoteWCF.Models.Work.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -168,32 +171,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ConsultWorksService\" />
-    <WCFMetadataStorage Include="Connected Services\ManageWorksService\" />
+    <WCFMetadataStorage Include="Connected Services\LibrarianServerLibrary\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ManageWorksService\ManageWorks.disco" />
+    <None Include="Connected Services\LibrarianServerLibrary\LibrarianServerLibrary.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ManageWorksService\configuration91.svcinfo" />
+    <None Include="Connected Services\LibrarianServerLibrary\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ManageWorksService\configuration.svcinfo" />
+    <None Include="Connected Services\LibrarianServerLibrary\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ManageWorksService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ConsultWorksService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ConsultWorksService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ConsultWorksService\Reference.svcmap">
+    <None Include="Connected Services\LibrarianServerLibrary\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
